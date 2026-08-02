@@ -1,0 +1,44 @@
+generated: '2026-08-02'
+method: probed
+source: live HTTPS probes of every host in apis.yml (baseURL, Website) on 2026-08-02
+host: https://unclenearest.com
+summary: >-
+  No /.well-known/ discovery documents are published by Uncle Nearest. Every canonical path returns the site's
+  WordPress 404 page (HTTP 404, text/html). No security.txt, no OIDC/OAuth metadata, no api-catalog, no ai-plugin.
+documents: []
+probes:
+- path: /.well-known/security.txt
+  status: 404
+  content_type: text/html
+- path: /.well-known/openid-configuration
+  status: 404
+  content_type: text/html
+- path: /.well-known/oauth-authorization-server
+  status: 404
+  content_type: text/html
+- path: /.well-known/api-catalog
+  status: 404
+  content_type: text/html
+- path: /.well-known/ai-plugin.json
+  status: 404
+  content_type: text/html
+- path: /.well-known/agent-card.json
+  status: 404
+  content_type: text/html
+- path: /.well-known/agent.json
+  status: 404
+  content_type: text/html
+- path: /llms.txt
+  status: 404
+  content_type: text/html
+other_hosts:
+- host: nearestgreendistillery.com
+  note: >-
+    Parked/lander domain. The root returns a 114-byte JS redirect to /lander and the host answers HTTP 200 text/html
+    for every /.well-known/* path — the classic catch-all false positive. Its /llms.txt (200, 65 bytes) is a generic
+    parking-provider "Disallow-Training" robots-style file, not an Uncle Nearest document. All results rejected; no
+    artifacts derived from this host.
+robots:
+  url: https://unclenearest.com/robots.txt
+  status: 200
+  sitemap: https://unclenearest.com/wp-sitemap.xml

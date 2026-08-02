@@ -1,0 +1,50 @@
+generated: '2026-08-02'
+method: derived
+source: openapi/uncle-nearest-tec-v1-openapi.json
+status: candidate
+summary: >-
+  No official hosted or remote Model Context Protocol server was found for Uncle Nearest. Searches of the docs surface,
+  the npm registry, PyPI, RubyGems and GitHub returned nothing, and no mcp.* host or /.well-known/ MCP metadata exists
+  on unclenearest.com. The following candidate tool set is DERIVED from the tec/v1 Events Calendar operations as a
+  proposal for an agent-facing read surface over the brand's public event calendar. It is NOT published by Uncle
+  Nearest, and no MCPServer pointer is wired into apis.yml.
+server: null
+transport: null
+url: null
+auth:
+  reads: none (published content is anonymous)
+  writes: HTTP Basic with a WordPress application password
+candidate_tools:
+- name: list_events
+  description: List published Uncle Nearest events, filterable by date range, venue, organizer, category, tag or proximity.
+  source_operation: openapi/uncle-nearest-tec-v1-openapi.json#getEvents
+- name: get_event
+  description: Fetch a single event by id.
+  source_operation: openapi/uncle-nearest-tec-v1-openapi.json#getEvent
+- name: list_venues
+  description: List the venues events are held at, including address and geolocation.
+  source_operation: openapi/uncle-nearest-tec-v1-openapi.json#getVenues
+- name: get_venue
+  description: Fetch a single venue by id.
+  source_operation: openapi/uncle-nearest-tec-v1-openapi.json#getVenue
+- name: list_organizers
+  description: List event organizers with contact details.
+  source_operation: openapi/uncle-nearest-tec-v1-openapi.json#getOrganizers
+- name: get_organizer
+  description: Fetch a single organizer by id.
+  source_operation: openapi/uncle-nearest-tec-v1-openapi.json#getOrganizer
+- name: list_series
+  description: List recurring-event series.
+  source_operation: openapi/uncle-nearest-tec-v1-openapi.json#getSeries
+excluded:
+  reason: >-
+    Write operations (createEvent, updateEvent, deleteEvent, createVenue, updateVenue, deleteVenue, createOrganizer,
+    updateOrganizer, deleteOrganizer) are deliberately excluded from this candidate surface — they mutate the brand's
+    live public calendar, require WordPress capabilities, and have no idempotency contract. See
+    agentic-access/uncle-nearest-agentic-access.yml.
+probes:
+- url: https://unclenearest.com/.well-known/ai-plugin.json
+  status: 404
+- url: https://mcp.unclenearest.com/
+  status: 000
+  note: Host does not resolve. api., developer., docs. and shop. subdomains also do not resolve (probed 2026-08-02).

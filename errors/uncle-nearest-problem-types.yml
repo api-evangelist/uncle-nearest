@@ -1,0 +1,92 @@
+generated: '2026-08-02'
+method: derived
+source: openapi/uncle-nearest-events-calendar-v1-openapi.json, openapi/uncle-nearest-tec-v1-openapi.json
+format: wp-rest-error
+format_note: >-
+  Not RFC 9457. Neither spec declares application/problem+json. Both APIs return the standard WordPress REST error
+  envelope — a JSON object with `code` (string slug), `message` (human-readable string) and `data.status` (the HTTP
+  status), optionally `data.params` / `data.details` for validation failures. The problem `type` column below is
+  therefore the WordPress error-code slug family, not a dereferenceable URI.
+envelope:
+  content_type: application/json
+  fields:
+  - name: code
+    description: Machine-readable error slug, e.g. rest_no_route, rest_forbidden, rest_post_invalid_id.
+  - name: message
+    description: Human-readable message.
+  - name: data.status
+    description: HTTP status code repeated in the body.
+  - name: data.params
+    description: Present on 400 validation failures; maps the offending parameter name to its message.
+problems:
+- status: 400
+  title: Bad request
+  description: One or more of the specified query variables has a bad format, or a required post/term ID is missing.
+  source_operations:
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json#GET /events
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json#GET /venues
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json#GET /organizers
+  - openapi/uncle-nearest-tec-v1-openapi.json#getEvents
+  - openapi/uncle-nearest-tec-v1-openapi.json#createEvent
+  remediation: Correct the query variable format (dates, IDs, geoloc pairs) or supply the missing identifier.
+- status: 401
+  title: Not authenticated
+  description: You are not logged in.
+  source_operations:
+  - openapi/uncle-nearest-tec-v1-openapi.json#createEvent
+  - openapi/uncle-nearest-tec-v1-openapi.json#updateEvent
+  - openapi/uncle-nearest-tec-v1-openapi.json#deleteEvent
+  - openapi/uncle-nearest-tec-v1-openapi.json#createVenue
+  - openapi/uncle-nearest-tec-v1-openapi.json#createOrganizer
+  remediation: Authenticate with WordPress (application password over HTTP Basic, or a logged-in cookie plus nonce).
+- status: 403
+  title: Forbidden
+  description: >-
+    The authenticated user lacks the capability for this operation, or the requested event/venue/organizer is not
+    publicly accessible.
+  source_operations:
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json#GET /events/{id}
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json#DELETE /venues/{id}
+  - openapi/uncle-nearest-tec-v1-openapi.json#updateVenue
+  - openapi/uncle-nearest-tec-v1-openapi.json#deleteOrganizer
+  remediation: Use an account with the required WordPress capability, or request only published content anonymously.
+- status: 404
+  title: Not found
+  description: >-
+    No record with the specified ID or slug exists, or the requested page is beyond the last page of results.
+  source_operations:
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json#GET /events/{id}
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json#GET /events/by-slug/{slug}
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json#GET /categories/{id}
+  - openapi/uncle-nearest-tec-v1-openapi.json#getEvent
+  - openapi/uncle-nearest-tec-v1-openapi.json#getVenue
+  remediation: Check the ID/slug, or read X-WP-TotalPages before requesting a page number.
+- status: 410
+  title: Gone
+  description: The event, venue, organizer, category or tag has already been trashed or deleted.
+  source_operations:
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json#DELETE /events/{id}
+  - openapi/uncle-nearest-tec-v1-openapi.json#deleteEvent
+  - openapi/uncle-nearest-tec-v1-openapi.json#deleteVenue
+  - openapi/uncle-nearest-tec-v1-openapi.json#deleteOrganizer
+  remediation: Treat as already-deleted; the delete is idempotent in effect even though no idempotency key exists.
+- status: 500
+  title: Server error
+  description: The record could not be created, updated or deleted.
+  source_operations:
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json#DELETE /events/{id}
+  - openapi/uncle-nearest-tec-v1-openapi.json#createEvent
+  - openapi/uncle-nearest-tec-v1-openapi.json#updateVenue
+  remediation: Retry; there is no documented retry-after or request-id header to correlate with.
+- status: 501
+  title: Not implemented — trashing unsupported
+  description: The post type does not support trashing. Set force=true to delete permanently.
+  source_operations:
+  - openapi/uncle-nearest-tec-v1-openapi.json#deleteEvent
+  - openapi/uncle-nearest-tec-v1-openapi.json#deleteVenue
+  - openapi/uncle-nearest-tec-v1-openapi.json#deleteOrganizer
+  remediation: Re-issue the delete with force=true.
+gaps:
+- No RFC 9457 application/problem+json representation.
+- No published error-code reference; the code slugs above are the WordPress core/plugin defaults, not documented by Uncle Nearest.
+- No request-id or correlation header documented on any error response.

@@ -1,0 +1,59 @@
+generated: '2026-08-02'
+method: derived
+source: >-
+  openapi/uncle-nearest-tec-v1-openapi.json, openapi/uncle-nearest-events-calendar-v1-openapi.json, and the live
+  WordPress REST route index at https://unclenearest.com/wp-json/ (fetched 2026-08-02, "authentication": [])
+docs: https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/
+docs_note: >-
+  Upstream WordPress documentation. Uncle Nearest publishes no authentication documentation of its own — there is no
+  developer portal, no API key issuance and no signup flow.
+summary:
+  types:
+  - http
+  - none
+  api_key_in: []
+  oauth2_flows: []
+  anonymous_reads: true
+  credential_issuance: none-public
+schemes:
+- name: BasicAuth
+  type: http
+  scheme: basic
+  sources:
+  - openapi/uncle-nearest-tec-v1-openapi.json
+  note: >-
+    Declared in components.securitySchemes but not applied to any individual operation via a security[] requirement,
+    so the spec does not say which operations need it. In practice it is the WordPress application-password
+    mechanism, used only for writes.
+- name: none
+  type: none
+  sources:
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json
+  - openapi/uncle-nearest-tec-v1-openapi.json
+  note: >-
+    The tribe/events/v1 document declares no securitySchemes at all, and the WordPress route index reports
+    "authentication": []. GET operations over published content returned 200 anonymously on 2026-08-02.
+mechanisms:
+- name: Anonymous read
+  applies_to: All GET operations over published content
+  credential: none
+- name: WordPress application password over HTTP Basic
+  applies_to: POST / PUT / DELETE on events, venues, organizers
+  credential: WordPress user plus an application password
+  issuance: Requires a WordPress account on unclenearest.com; not available to the public.
+- name: Cookie plus X-WP-Nonce
+  applies_to: Same-origin browser requests from a logged-in admin
+  credential: WordPress session cookie plus a nonce in the X-WP-Nonce header
+  note: >-
+    The route index advertises X-WP-Nonce and Authorization in its Access-Control-Allow-Headers, confirming both paths
+    are wired.
+not_present:
+- oauth2
+- openIdConnect
+- mutualTLS
+- apiKey
+- jwt
+gaps:
+- No per-operation security[] requirements in either spec, so required privileges must be inferred from the 401/403 responses.
+- No public credential issuance — writes are effectively unavailable to third parties.
+- No scopes surface; scopes/ is intentionally not emitted for this provider.

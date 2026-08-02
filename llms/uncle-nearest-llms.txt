@@ -1,0 +1,50 @@
+# Uncle Nearest
+
+> Uncle Nearest, Inc. is an American whiskey company in Shelbyville, Tennessee, founded in 2017 and named for Nathan
+> "Nearest" Green, the formerly enslaved master distiller who taught Jack Daniel to make whiskey. It is a
+> consumer-facing brand with no developer program and no product API. Its only public machine-readable surfaces are
+> the WordPress REST API and two self-documenting Events Calendar REST APIs served from unclenearest.com, which
+> expose the brand's published events, venues and organizers as JSON.
+
+<!--
+generated: 2026-08-02
+method: generated
+source: apis.yml + artifacts in this repo; https://unclenearest.com/llms.txt returned HTTP 404 on 2026-08-02
+-->
+
+## APIs
+
+- [Uncle Nearest Events Calendar REST API (tribe/events/v1)](https://unclenearest.com/wp-json/tribe/events/v1/): Read events, venues, organizers, event categories and event tags published on unclenearest.com. Anonymous reads of published content; writes require WordPress authentication.
+- [Uncle Nearest Events Calendar REST API (tec/v1)](https://unclenearest.com/wp-json/tec/v1): Second-generation events API with named operationIds — events, organizers, venues and series.
+- [Uncle Nearest WordPress REST API](https://unclenearest.com/wp-json/): WordPress core REST API — posts, pages, media, taxonomies and the tribe_events / tribe_venue / tribe_organizer post types.
+
+## Specs
+
+- [Events Calendar v1 OpenAPI 3.0.0 (live)](https://unclenearest.com/wp-json/tribe/events/v1/doc): Self-published by the API at its /doc endpoint. 14 paths.
+- [Events Calendar tec/v1 OpenAPI 3.0.4 (live)](https://unclenearest.com/wp-json/tec/v1/docs): Self-published by the API at its /docs endpoint. 8 paths, named operationIds.
+- [WordPress REST route index](https://unclenearest.com/wp-json/): The route/args discovery document for the core API. Not OpenAPI.
+
+## Docs
+
+- [The Events Calendar REST API documentation](https://theeventscalendar.com/knowledgebase/the-events-calendar-rest-api/): Upstream vendor documentation for the events APIs Uncle Nearest runs.
+- [WordPress REST API handbook](https://developer.wordpress.org/rest-api/): Upstream documentation for the core API.
+
+## Company
+
+- [Uncle Nearest](https://unclenearest.com/): Official site.
+- [History](https://unclenearest.com/history): The story of Nathan "Nearest" Green.
+- [Nearest Green Distillery](https://unclenearest.com/distillery/): Visitor destination in Shelbyville, Tennessee.
+- [Tours and tastings](https://unclenearest.com/tours/): Booking for distillery tours.
+- [Events](https://unclenearest.com/live/): The event calendar backing the events APIs above.
+- [Shop](https://unclenearest.com/shop-whiskey/): Direct-to-consumer whiskey shop (fulfilled via ReserveBar).
+- [Press](https://unclenearest.com/press/)
+- [Awards](https://unclenearest.com/awards/)
+- [Distributors](https://unclenearest.com/distributors/)
+- [Contact](https://unclenearest.com/contact-us/)
+- [Terms and conditions](https://unclenearest.com/terms-conditions/)
+- [Privacy](https://unclenearest.com/privacy/)
+- [Accessibility](https://unclenearest.com/accessibility/)
+
+## Not available
+
+- No developer portal, API key signup, SDK, CLI, Postman collection, MCP server, A2A agent card, AsyncAPI, webhooks, status page, changelog, sandbox or published security.txt. Verified by probe on 2026-08-02.

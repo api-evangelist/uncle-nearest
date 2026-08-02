@@ -1,0 +1,127 @@
+generated: '2026-08-02'
+method: derived
+source: >-
+  openapi/uncle-nearest-tec-v1-openapi.json, openapi/uncle-nearest-events-calendar-v1-openapi.json and the live
+  WordPress REST route index at https://unclenearest.com/wp-json/ (fetched 2026-08-02)
+summary: >-
+  Uncle Nearest publishes no API conventions of its own. Every cross-cutting semantic below is inherited from
+  WordPress core REST and The Events Calendar plugin as deployed on unclenearest.com, and is recorded here as observed
+  from the two live OpenAPI documents and the route index — not as a provider commitment.
+authentication:
+  style: none-for-published-reads
+  writes: HTTP Basic with a WordPress application password, or logged-in cookie plus X-WP-Nonce header
+  declared_scheme: BasicAuth (http/basic) — declared in tec/v1 components.securitySchemes, not applied per operation
+  detail: authentication/uncle-nearest-authentication.yml
+  anonymous_reads_confirmed: true
+idempotency:
+  supported: false
+  header: null
+  note: >-
+    No Idempotency-Key header or equivalent exists anywhere in either spec or in the WordPress route index. Retrying a
+    POST creates a duplicate record. DELETE is naturally idempotent in effect (repeat calls return 410).
+pagination:
+  style: page-number
+  params:
+  - name: page
+    default: 1
+  - name: per_page
+    default: 10
+    max: 100
+  response_headers:
+  - X-WP-Total
+  - X-WP-TotalPages
+  - Link
+  response_fields:
+    tribe_events_v1:
+    - total
+    - total_pages
+    - rest_url
+    - next_rest_url
+    - previous_rest_url
+  link_header: RFC 5988 Link header with rel="next" / rel="prev" (documented on tec/v1 list operations)
+  cors_exposed_headers:
+  - X-WP-Total
+  - X-WP-TotalPages
+  - Link
+sorting_filtering:
+  tec_v1:
+    orderby_supported: true
+    order_supported: true
+    filters:
+    - start_date
+    - end_date
+    - starts_before
+    - starts_after
+    - ends_before
+    - ends_after
+    - search
+    - categories
+    - tags
+    - venue
+    - organizer
+    - featured
+    - status
+    - ticketed
+    - recurring
+    - virtual
+    - series
+    - in_series
+    - related_to
+    - near
+    - geoloc_lat
+    - geoloc_lng
+    - distance
+  tribe_events_v1:
+    orderby_supported: false
+    geoloc_filters:
+    - geoloc
+    - geoloc_lat
+    - geoloc_lng
+field_expansion:
+  style: embedded-by-default
+  note: >-
+    tribe/events/v1 embeds full Venue, Organizer, Term (categories/tags), Image and CostDetails objects inside each
+    Event rather than returning ids. The WordPress core API instead supports _embed and _fields query parameters.
+  params:
+  - _embed
+  - _fields
+metadata:
+  custom_fields: WordPress meta on the tribe_events / tribe_venue / tribe_organizer post types; not documented publicly.
+request_tracing:
+  request_id_header: null
+  note: No request-id or correlation header is emitted or documented.
+versioning:
+  scheme: uri-path-namespace
+  namespaces:
+  - tribe/events/v1
+  - tec/v1
+  - wp/v2
+  current: tec/v1 is the newer generation; tribe/events/v1 remains live in parallel
+  policy_url: null
+error_envelope:
+  format: wp-rest-error
+  fields:
+  - code
+  - message
+  - data.status
+  detail: errors/uncle-nearest-problem-types.yml
+rate_limiting:
+  documented: false
+  headers: []
+  note: >-
+    No rate-limit headers appear in either spec and no rate-limit policy is published. Wordfence is installed on the
+    host (a wordfence/v1 namespace is present in the route index), so unpublished request throttling may apply.
+caching:
+  headers_observed:
+  - 'Cache-Control: no-store, no-cache, must-revalidate'
+  - 'X-Robots-Tag: noindex'
+  note: Observed on the /doc and /docs endpoints; the WP Super Cache plugin is installed for page caching.
+content_negotiation:
+  note: >-
+    The host returns HTTP 406 on wp-json requests that omit an Accept-Language header; sending a normal browser
+    Accept-Language yields 200. Clients should send Accept-Language explicitly.
+cross_links:
+  errors: errors/uncle-nearest-problem-types.yml
+  authentication: authentication/uncle-nearest-authentication.yml
+  lifecycle: lifecycle/uncle-nearest-lifecycle.yml
+  data_model: data-model/uncle-nearest-data-model.yml

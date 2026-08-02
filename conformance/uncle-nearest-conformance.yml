@@ -1,0 +1,84 @@
+generated: '2026-08-02'
+method: derived
+source: >-
+  openapi/uncle-nearest-tec-v1-openapi.json, openapi/uncle-nearest-events-calendar-v1-openapi.json,
+  security/uncle-nearest-domain-security.yml, well-known/uncle-nearest-well-known.yml
+summary: >-
+  Uncle Nearest publishes no compliance or standards claims of any kind. Everything below is derived from the two live
+  OpenAPI documents and from probes of the host. No certification, trust center, or compliance program was found, so
+  no Compliance pointer is emitted.
+standards:
+- id: openapi-3.0
+  conforms: true
+  evidence: >-
+    Two documents self-published by the APIs — OpenAPI 3.0.0 at /wp-json/tribe/events/v1/doc and OpenAPI 3.0.4 at
+    /wp-json/tec/v1/docs, both with servers[] pointing at unclenearest.com.
+- id: rfc5988-web-linking
+  conforms: true
+  evidence: tec/v1 list operations document an RFC 5988 Link header with rel="next" / rel="prev" for pagination.
+- id: http-basic-auth
+  conforms: true
+  evidence: tec/v1 components.securitySchemes declares BasicAuth (type http, scheme basic).
+- id: oauth2
+  conforms: false
+  evidence: No oauth2 security scheme in either spec; /.well-known/oauth-authorization-server returns 404.
+- id: oidc
+  conforms: false
+  evidence: /.well-known/openid-configuration returns 404.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: >-
+    No application/problem+json media type anywhere in either spec; errors use the WordPress {code,message,data.status}
+    envelope.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404.
+- id: rfc8594-sunset-header
+  conforms: false
+  evidence: No Sunset or Deprecation header documented; no deprecation policy published.
+- id: rfc8615-well-known-uris
+  conforms: false
+  evidence: No /.well-known/ documents served; every probed path returns 404.
+- id: asyncapi
+  conforms: false
+  evidence: No event, streaming or webhook surface exists — not applicable to this provider.
+- id: a2a-agent-card
+  conforms: false
+  evidence: /.well-known/agent-card.json and /.well-known/agent.json both 404 on unclenearest.com.
+- id: mcp
+  conforms: false
+  evidence: No hosted or remote Model Context Protocol server found.
+- id: pagination
+  conforms: true
+  evidence: page/per_page parameters plus X-WP-Total and X-WP-TotalPages response headers on all list operations.
+- id: idempotency
+  conforms: false
+  evidence: No idempotency key header or parameter in either spec.
+- id: json-api
+  conforms: false
+  evidence: Plain JSON resource representations; no JSON:API document structure.
+- id: odata
+  conforms: false
+- id: scim2
+  conforms: false
+- id: fhir-r4
+  conforms: false
+- id: psd2
+  conforms: false
+- id: fapi
+  conforms: false
+compliance_programs:
+  published: false
+  certifications: []
+  note: >-
+    No SOC 2, ISO 27001, PCI DSS, HIPAA, FedRAMP or GDPR posture is published. probe-security-programs.py found no
+    trust center and no vulnerability-disclosure program on 2026-08-02. Uncle Nearest is an alcohol producer, not a
+    software vendor; the applicable regulatory surface is beverage-alcohol (TTB/ABC) and age-gating, not API
+    compliance regimes.
+regulatory_context:
+- regime: US TTB / state ABC alcohol regulation
+  relevance: Producer and DTC shipping of distilled spirits.
+  api_relevance: none
+- regime: Age verification / responsible-marketing
+  relevance: The site carries an "Enjoy responsibly" / "Drink Honorably" posture in its published copy.
+  api_relevance: none

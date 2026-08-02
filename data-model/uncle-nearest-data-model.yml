@@ -1,0 +1,184 @@
+generated: '2026-08-02'
+method: derived
+source: openapi/uncle-nearest-events-calendar-v1-openapi.json, openapi/uncle-nearest-tec-v1-openapi.json
+summary: >-
+  Entity graph derived from the components.schemas $ref links in both live OpenAPI documents. The domain is the
+  brand's public event calendar: events held at venues, run by organizers, classified by categories and tags, and in
+  tec/v1 optionally grouped into a series.
+entities:
+- name: Event
+  source: both
+  schema:
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json#/components/schemas/Event
+  - openapi/uncle-nearest-tec-v1-openapi.json#/components/schemas/Event
+  identifiers:
+  - id
+  - slug
+  - global_id
+  - rest_url
+  key_fields:
+  - title
+  - description
+  - excerpt
+  - status
+  - url
+  - start_date
+  - end_date
+  - all_day
+  - timezone
+  - featured
+  - cost
+  - website
+- name: Venue
+  source: both
+  schema:
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json#/components/schemas/Venue
+  - openapi/uncle-nearest-tec-v1-openapi.json#/components/schemas/Venue
+  identifiers:
+  - id
+  - slug
+  - global_id
+  key_fields:
+  - venue
+  - address
+  - city
+  - state_province
+  - zip
+  - country
+  - phone
+  - website
+  - geo_lat
+  - geo_lng
+- name: Organizer
+  source: both
+  schema:
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json#/components/schemas/Organizer
+  - openapi/uncle-nearest-tec-v1-openapi.json#/components/schemas/Organizer
+  identifiers:
+  - id
+  - slug
+  - global_id
+  key_fields:
+  - organizer
+  - phone
+  - website
+  - email
+- name: Term
+  source: tribe/events/v1
+  schema: openapi/uncle-nearest-events-calendar-v1-openapi.json#/components/schemas/Term
+  note: Shared shape for event categories (tribe_events_cat taxonomy) and event tags (post_tag taxonomy).
+  identifiers:
+  - id
+  - slug
+  key_fields:
+  - name
+  - taxonomy
+  - description
+  - parent
+  - count
+  - url
+- name: Series
+  source: tec/v1
+  schema: openapi/uncle-nearest-tec-v1-openapi.json#/components/schemas/Series
+  note: Recurring-event grouping introduced by Events Pro. Read-only in the published spec (GET /series).
+  identifiers:
+  - id
+  - slug
+- name: Image
+  source: tribe/events/v1
+  schema: openapi/uncle-nearest-events-calendar-v1-openapi.json#/components/schemas/Image
+  note: Featured image with nested ImageSize variants.
+- name: CostDetails
+  source: tribe/events/v1
+  schema: openapi/uncle-nearest-events-calendar-v1-openapi.json#/components/schemas/CostDetails
+- name: DateDetails
+  source: both
+  schema:
+  - openapi/uncle-nearest-events-calendar-v1-openapi.json#/components/schemas/DateDetails
+  - openapi/uncle-nearest-tec-v1-openapi.json#/components/schemas/DateDetails
+- name: TEC_Post_Entity
+  source: tec/v1
+  schema: openapi/uncle-nearest-tec-v1-openapi.json#/components/schemas/TEC_Post_Entity
+  note: >-
+    Base WordPress post shape that Event, Venue, Organizer and Series each extend via allOf — the reuse backbone of
+    the tec/v1 spec.
+relationships:
+- from: Event
+  to: Venue
+  cardinality: has_one
+  via: venue
+  binding: embedded $ref (tribe/events/v1) / venue id filter (tec/v1)
+  evidence: Event.venue -> $ref Venue
+- from: Event
+  to: Organizer
+  cardinality: has_many
+  via: organizer
+  binding: embedded array of $ref
+  evidence: Event.organizer -> array of $ref Organizer
+- from: Event
+  to: Term
+  cardinality: has_many
+  via: categories
+  binding: embedded array of $ref (taxonomy tribe_events_cat)
+  evidence: Event.categories -> array of $ref Term
+- from: Event
+  to: Term
+  cardinality: has_many
+  via: tags
+  binding: embedded array of $ref (taxonomy post_tag)
+  evidence: Event.tags -> array of $ref Term
+- from: Event
+  to: Image
+  cardinality: has_one
+  via: image
+  binding: embedded $ref
+  evidence: Event.image -> $ref Image
+- from: Event
+  to: CostDetails
+  cardinality: has_many
+  via: cost_details
+  binding: embedded array of $ref
+  evidence: Event.cost_details -> array of $ref CostDetails
+- from: Event
+  to: DateDetails
+  cardinality: has_one
+  via: start_date_details / end_date_details
+  binding: embedded $ref
+- from: Event
+  to: Series
+  cardinality: belongs_to
+  via: series
+  binding: id reference (tec/v1 query parameters series / in_series)
+  confidence: medium
+  note: Derived from the tec/v1 list filters; the Series relation is not expressed as a $ref in the Event schema.
+- from: Image
+  to: ImageSize
+  cardinality: has_many
+  via: sizes
+  binding: embedded $ref map
+- from: Event
+  to: TEC_Post_Entity
+  cardinality: extends
+  via: allOf
+  binding: schema composition (tec/v1)
+- from: Venue
+  to: TEC_Post_Entity
+  cardinality: extends
+  via: allOf
+  binding: schema composition (tec/v1)
+- from: Organizer
+  to: TEC_Post_Entity
+  cardinality: extends
+  via: allOf
+  binding: schema composition (tec/v1)
+- from: Series
+  to: TEC_Post_Entity
+  cardinality: extends
+  via: allOf
+  binding: schema composition (tec/v1)
+id_conventions:
+  scheme: WordPress integer post/term IDs, plus URL slugs on the by-slug routes
+  global_id: >-
+    tribe/events/v1 also emits global_id and global_id_lineage — Event Aggregator identifiers of the form
+    <host>?id=<post_id> used to de-duplicate events imported across sites.
+render: null

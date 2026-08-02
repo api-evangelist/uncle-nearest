@@ -1,0 +1,58 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for the Uncle Nearest Events Calendar REST API (tribe/events/v1)
+  version: 1.0.0
+extends: openapi/uncle-nearest-events-calendar-v1-openapi.json
+x-generated: '2026-08-02'
+x-method: generated
+x-source: >-
+  Enhancements derived from this repo's artifacts (conventions, errors, data-model, authentication) over the verbatim
+  spec harvested from https://unclenearest.com/wp-json/tribe/events/v1/doc on 2026-08-02. The original spec is never
+  mutated.
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: uncle-nearest
+    x-apievangelist-harvested: '2026-08-02'
+    x-apievangelist-source-url: https://unclenearest.com/wp-json/tribe/events/v1/doc
+    x-apievangelist-surface: >-
+      Plugin-provided events API served from the brand's own WordPress host. Not a product API and not
+      supported as a developer-facing interface by Uncle Nearest.
+    contact:
+      name: Uncle Nearest
+      url: https://unclenearest.com/contact-us/
+    license:
+      name: No published API terms
+      url: https://unclenearest.com/terms-conditions/
+- target: $.info
+  update:
+    x-apievangelist-gaps:
+    - no-operationids
+    - no-summaries
+    - no-security-schemes-declared
+    - no-response-examples
+    - no-tags
+- target: $.components
+  update:
+    x-apievangelist-error-catalog: errors/uncle-nearest-problem-types.yml
+    x-apievangelist-data-model: data-model/uncle-nearest-data-model.yml
+- target: $.paths['/events'].get
+  update:
+    x-apievangelist-conventions:
+      pagination:
+        style: page-number
+        params:
+        - page
+        - per_page
+        response_fields:
+        - total
+        - total_pages
+        - rest_url
+        - next_rest_url
+        - previous_rest_url
+      auth: none-for-published-content
+- target: $.servers
+  update:
+    x-apievangelist-note: >-
+      Single server, the brand's own host. Anonymous GETs return published events; write methods require WordPress
+      cookie or application-password authentication.

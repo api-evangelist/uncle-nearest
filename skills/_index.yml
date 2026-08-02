@@ -1,0 +1,27 @@
+generated: '2026-08-02'
+method: generated
+source: >-
+  openapi/uncle-nearest-tec-v1-openapi.json — every operationId referenced below was verified verbatim in the spec.
+  No provider-published Agent Skills or AGENTS.md exist for Uncle Nearest.
+skills:
+- file: uncle-nearest-find-upcoming-events.md
+  name: Find upcoming Uncle Nearest events
+  api: openapi/uncle-nearest-tec-v1-openapi.json
+  operations:
+  - getEvents
+  - getEvent
+  - getVenue
+  - getOrganizer
+- file: uncle-nearest-map-venues-and-organizers.md
+  name: Map Uncle Nearest venues and organizers
+  api: openapi/uncle-nearest-tec-v1-openapi.json
+  operations:
+  - getVenues
+  - getVenue
+  - getOrganizers
+  - getOrganizer
+  - getEvents
+  - getSeries
+scope_note: >-
+  Read-only skills only. Uncle Nearest's write operations mutate the brand's live public calendar, require WordPress
+  capabilities, and carry no idempotency contract, so no write skill is packaged.

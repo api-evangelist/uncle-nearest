@@ -1,0 +1,53 @@
+generated: '2026-08-02'
+method: probed
+source: >-
+  Live probes of unclenearest.com on 2026-08-02 plus openapi/uncle-nearest-tec-v1-openapi.json and
+  openapi/uncle-nearest-events-calendar-v1-openapi.json
+summary: >-
+  Uncle Nearest publishes no API lifecycle commitments — no versioning policy, no deprecation policy, no SLA, no
+  status page and no changelog. The only versioning signal is the URI namespace of the two Events Calendar APIs, which
+  is set by the upstream plugin rather than by the brand. Because no status page or deprecation policy exists, no
+  StatusPage or Deprecation pointer is emitted in apis.yml.
+versioning:
+  scheme: uri-path-namespace
+  namespaces:
+  - tribe/events/v1
+  - tec/v1
+  - wp/v2
+  current: tec/v1 (newer generation; tribe/events/v1 still served in parallel)
+  policy_url: null
+  owner: upstream plugin vendor (The Events Calendar), not Uncle Nearest
+deprecation:
+  policy_url: null
+  sunset_header: false
+  deprecation_header: false
+  note: >-
+    No RFC 8594 Sunset or Deprecation header appears in either spec or in observed responses. tribe/events/v1 is the
+    older generation superseded by tec/v1 on the same host, but no deprecation of it is announced.
+sla:
+  url: null
+  uptime_target: null
+status_page:
+  url: null
+  probes:
+  - url: https://status.unclenearest.com/
+    status: 000
+    note: DNS/connection failure — no such host.
+  - url: https://unclenearest.com/status/
+    status: 404
+changelog:
+  url: null
+  probes:
+  - url: https://unclenearest.com/changelog/
+    status: 404
+support:
+  url: https://unclenearest.com/contact-us/
+  channel: web contact form
+  developer_support: none
+deprecated_operations: []
+maturity:
+  stage: incidental
+  note: >-
+    These are not product APIs. They are CMS and events-plugin endpoints exposed as a side effect of the marketing
+    site's WordPress stack. Treat availability, shape and continuity as unversioned and subject to change with any
+    plugin or theme update.

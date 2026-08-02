@@ -1,7 +1,15 @@
 aid: uncle-nearest
 name: Uncle Nearest
-description: 'Uncle Nearest is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Uncle Nearest, Inc. is an American whiskey company headquartered in Shelbyville, Tennessee, founded in 2017 by Fawn
+  Weaver and Keith Weaver and named for Nathan "Nearest" Green, the formerly enslaved master distiller who taught Jack
+  Daniel the craft. The company produces the Uncle Nearest 1856 Premium Aged, 1884 Small Batch, Master Blend, Single
+  Barrel, Straight Rye and Uncut/Unfiltered Rye expressions, and operates the Nearest Green Distillery visitor
+  destination in Shelbyville with tours, tastings, private events and a retail shop. Uncle Nearest is a privately held,
+  consumer-facing brand with no developer program and no product API; its only public machine-readable surfaces are the
+  WordPress REST API and the two OpenAPI-documented Events Calendar REST APIs served from its own web host at
+  unclenearest.com, which expose the brand's published events, venues and organizers as read-only JSON.
+image: https://unclenearest.com/wp-content/themes/unclenearest/lib/img/un-logo-2022.svg
 url: https://raw.githubusercontent.com/api-evangelist/uncle-nearest/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,12 +20,146 @@ created: '2026-08-02'
 modified: '2026-08-02'
 tags:
 - Company
-apis: []
+- whiskey
+- spirits
+- beverage-alcohol
+- consumer-packaged-goods
+- distillery
+- hospitality
+- events
+- tennessee
+- wordpress
+apis:
+- name: Uncle Nearest Events Calendar REST API (tribe/events/v1)
+  description: >-
+    Read-only-by-default REST API for the events, venues, organizers, event categories and event tags published on
+    unclenearest.com, served by The Events Calendar plugin from the brand's own WordPress host. The API self-publishes
+    an OpenAPI 3.0.0 document at its /doc endpoint. Anonymous callers may read published events; write operations
+    require WordPress authentication.
+  humanURL: https://unclenearest.com/live/
+  baseURL: https://unclenearest.com/wp-json/tribe/events/v1/
+  tags:
+  - events
+  - venues
+  - calendar
+  - wordpress
+  - hospitality
+  properties:
+  - type: OpenAPI
+    url: openapi/uncle-nearest-events-calendar-v1-openapi.json
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tribe/events/v1/doc
+  - type: Documentation
+    name: The Events Calendar REST API documentation (upstream vendor)
+    url: https://theeventscalendar.com/knowledgebase/the-events-calendar-rest-api/
+  - type: Overlay
+    url: overlays/uncle-nearest-events-calendar-v1-overlay.yaml
+- name: Uncle Nearest Events Calendar REST API (tec/v1)
+  description: >-
+    Second-generation Events Calendar REST API on the same host, covering events, organizers, venues and series with
+    named operationIds. Self-publishes an OpenAPI 3.0.4 document at its /docs endpoint. Reads are anonymous for
+    published content; creates, updates and deletes require WordPress authentication.
+  humanURL: https://unclenearest.com/live/
+  baseURL: https://unclenearest.com/wp-json/tec/v1
+  tags:
+  - events
+  - venues
+  - calendar
+  - wordpress
+  - hospitality
+  properties:
+  - type: OpenAPI
+    url: openapi/uncle-nearest-tec-v1-openapi.json
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tec/v1/docs
+  - type: Documentation
+    name: The Events Calendar REST API documentation (upstream vendor)
+    url: https://theeventscalendar.com/knowledgebase/the-events-calendar-rest-api/
+  - type: Overlay
+    url: overlays/uncle-nearest-tec-v1-overlay.yaml
+- name: Uncle Nearest WordPress REST API
+  description: >-
+    The standard WordPress core REST API exposed at unclenearest.com/wp-json/, publishing the brand's posts, pages,
+    media, categories, tags, taxonomies and custom event post types as JSON. The route index at the base URL is the
+    machine-readable discovery document; no OpenAPI is published for it. Anonymous reads are permitted for published
+    content, all writes require authentication.
+  humanURL: https://unclenearest.com/
+  baseURL: https://unclenearest.com/wp-json/
+  tags:
+  - content
+  - cms
+  - wordpress
+  properties:
+  - type: APIReference
+    name: WordPress REST route discovery index
+    url: https://unclenearest.com/wp-json/
+  - type: Documentation
+    name: WordPress REST API handbook (upstream)
+    url: https://developer.wordpress.org/rest-api/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: AgenticAccess
+  url: agentic-access/uncle-nearest-agentic-access.yml
 - type: Website
+  url: https://unclenearest.com/
+- type: Investors
+  name: Forge Global secondary-market listing
   url: https://forgeglobal.com/uncle-nearest_stock/
+- type: About
+  name: History
+  url: https://unclenearest.com/history
+- type: Press
+  url: https://unclenearest.com/press/
+- type: Contact
+  url: https://unclenearest.com/contact-us/
+- type: Support
+  name: Contact Us
+  url: https://unclenearest.com/contact-us/
+- type: FAQ
+  name: Nearest Green Distillery FAQs
+  url: https://unclenearest.com/nearest-green-distillery-faqs/
+- type: Events
+  name: Uncle Nearest Live
+  url: https://unclenearest.com/live/
+- type: TermsOfService
+  url: https://unclenearest.com/terms-conditions/
+- type: PrivacyPolicy
+  url: https://unclenearest.com/privacy/
+- type: Accessibility
+  url: https://unclenearest.com/accessibility/
+- type: Twitter
+  url: https://twitter.com/unclenearest
+- type: Facebook
+  url: https://facebook.com/unclenearest
+- type: Instagram
+  url: https://instagram.com/unclenearest
+- type: Youtube
+  url: https://www.youtube.com/channel/UCcfM0XBsHSQRB18ssOImb_g
+- type: Authentication
+  url: authentication/uncle-nearest-authentication.yml
+- type: Conventions
+  url: conventions/uncle-nearest-conventions.yml
+- type: ErrorCatalog
+  url: errors/uncle-nearest-problem-types.yml
+- type: DataModel
+  url: data-model/uncle-nearest-data-model.yml
+- type: Conformance
+  url: conformance/uncle-nearest-conformance.yml
+- type: Lifecycle
+  url: lifecycle/uncle-nearest-lifecycle.yml
+- type: DomainSecurity
+  url: security/uncle-nearest-domain-security.yml
+- type: LLMsTxt
+  url: llms/uncle-nearest-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+
+x-enrichment:
+  date: '2026-08-02'
+  status: enriched
+  artifacts_added: 18
+  pass: local-v1

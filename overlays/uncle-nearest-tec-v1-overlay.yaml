@@ -1,0 +1,58 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for the Uncle Nearest Events Calendar REST API (tec/v1)
+  version: 1.0.0
+extends: openapi/uncle-nearest-tec-v1-openapi.json
+x-generated: '2026-08-02'
+x-method: generated
+x-source: >-
+  Enhancements derived from this repo's artifacts (conventions, errors, data-model, authentication) over the verbatim
+  spec harvested from https://unclenearest.com/wp-json/tec/v1/docs on 2026-08-02. The original spec is never mutated.
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: uncle-nearest
+    x-apievangelist-harvested: '2026-08-02'
+    x-apievangelist-source-url: https://unclenearest.com/wp-json/tec/v1/docs
+    x-apievangelist-surface: >-
+      Plugin-provided events API served from the brand's own WordPress host. Not a product API and not
+      supported as a developer-facing interface by Uncle Nearest.
+- target: $.info
+  update:
+    x-apievangelist-strengths:
+    - named-operationids
+    - tagged-operations
+    - documented-4xx-5xx-responses
+    - pagination-headers-documented
+    x-apievangelist-gaps:
+    - no-response-examples
+    - security-scheme-declared-but-not-applied-per-operation
+    - no-rate-limit-headers-documented
+- target: $.components
+  update:
+    x-apievangelist-error-catalog: errors/uncle-nearest-problem-types.yml
+    x-apievangelist-data-model: data-model/uncle-nearest-data-model.yml
+    x-apievangelist-authentication: authentication/uncle-nearest-authentication.yml
+- target: $.paths['/events'].get
+  update:
+    x-apievangelist-conventions:
+      pagination:
+        style: page-number
+        params:
+        - page
+        - per_page
+        response_headers:
+        - X-WP-Total
+        - X-WP-TotalPages
+        - Link
+      auth: none-for-published-content
+- target: $.paths['/events'].post
+  update:
+    x-apievangelist-conventions:
+      auth: required
+      idempotency: not-supported
+- target: $.servers
+  update:
+    x-apievangelist-note: >-
+      Single server, the brand's own host. Anonymous GETs return published events, venues, organizers and series;
+      POST/PUT/DELETE require WordPress authentication and the corresponding capability.
