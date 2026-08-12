@@ -30,59 +30,12 @@ tags:
 - tennessee
 - wordpress
 apis:
-- name: Uncle Nearest Events Calendar REST API (tribe/events/v1)
-  description: >-
-    Read-only-by-default REST API for the events, venues, organizers, event categories and event tags published on
-    unclenearest.com, served by The Events Calendar plugin from the brand's own WordPress host. The API self-publishes
-    an OpenAPI 3.0.0 document at its /doc endpoint. Anonymous callers may read published events; write operations
-    require WordPress authentication.
-  humanURL: https://unclenearest.com/live/
-  baseURL: https://unclenearest.com/wp-json/tribe/events/v1/
-  tags:
-  - events
-  - venues
-  - calendar
-  - wordpress
-  - hospitality
-  properties:
-  - type: OpenAPI
-    url: openapi/uncle-nearest-events-calendar-v1-openapi.json
-  - type: APIReference
-    url: https://unclenearest.com/wp-json/tribe/events/v1/doc
-  - type: Documentation
-    name: The Events Calendar REST API documentation (upstream vendor)
-    url: https://theeventscalendar.com/knowledgebase/the-events-calendar-rest-api/
-  - type: Overlay
-    url: overlays/uncle-nearest-events-calendar-v1-overlay.yaml
-- name: Uncle Nearest Events Calendar REST API (tec/v1)
-  description: >-
-    Second-generation Events Calendar REST API on the same host, covering events, organizers, venues and series with
-    named operationIds. Self-publishes an OpenAPI 3.0.4 document at its /docs endpoint. Reads are anonymous for
-    published content; creates, updates and deletes require WordPress authentication.
-  humanURL: https://unclenearest.com/live/
-  baseURL: https://unclenearest.com/wp-json/tec/v1
-  tags:
-  - events
-  - venues
-  - calendar
-  - wordpress
-  - hospitality
-  properties:
-  - type: OpenAPI
-    url: openapi/uncle-nearest-tec-v1-openapi.json
-  - type: APIReference
-    url: https://unclenearest.com/wp-json/tec/v1/docs
-  - type: Documentation
-    name: The Events Calendar REST API documentation (upstream vendor)
-    url: https://theeventscalendar.com/knowledgebase/the-events-calendar-rest-api/
-  - type: Overlay
-    url: overlays/uncle-nearest-tec-v1-overlay.yaml
 - name: Uncle Nearest WordPress REST API
   description: >-
-    The standard WordPress core REST API exposed at unclenearest.com/wp-json/, publishing the brand's posts, pages,
-    media, categories, tags, taxonomies and custom event post types as JSON. The route index at the base URL is the
-    machine-readable discovery document; no OpenAPI is published for it. Anonymous reads are permitted for published
-    content, all writes require authentication.
+    The standard WordPress core REST API exposed at unclenearest.com/wp-json/, publishing the brand's
+    posts, pages, media, categories, tags, taxonomies and custom event post types as JSON. The route index
+    at the base URL is the machine-readable discovery document; no OpenAPI is published for it. Anonymous
+    reads are permitted for published content, all writes require authentication.
   humanURL: https://unclenearest.com/
   baseURL: https://unclenearest.com/wp-json/
   tags:
@@ -96,12 +49,144 @@ apis:
   - type: Documentation
     name: WordPress REST API handbook (upstream)
     url: https://developer.wordpress.org/rest-api/
+- aid: uncle-nearest:uncle-nearest-categories-api
+  name: Uncle Nearest Categories API
+  description: The Categories API from Uncle Nearest — 2 operation(s) for categories.
+  humanURL: https://unclenearest.com/live/
+  baseURL: https://unclenearest.com/wp-json/tribe/events/v1/
+  tags:
+  - Categories
+  properties:
+  - type: OpenAPI
+    url: openapi/uncle-nearest-categories-api-openapi.yml
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tribe/events/v1/doc
+  - type: Documentation
+    url: https://theeventscalendar.com/knowledgebase/the-events-calendar-rest-api/
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tec/v1/docs
+- aid: uncle-nearest:uncle-nearest-common-api
+  name: Uncle Nearest Common API
+  description: These operations are introduced by the Common library.
+  humanURL: https://unclenearest.com/live/
+  baseURL: https://unclenearest.com/wp-json/tribe/events/v1/
+  tags:
+  - Common
+  properties:
+  - type: OpenAPI
+    url: openapi/uncle-nearest-common-api-openapi.yml
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tribe/events/v1/doc
+  - type: Documentation
+    url: https://theeventscalendar.com/knowledgebase/the-events-calendar-rest-api/
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tec/v1/docs
+- aid: uncle-nearest:uncle-nearest-doc-api
+  name: Uncle Nearest Doc API
+  description: The Doc API from Uncle Nearest — 1 operation(s) for doc.
+  humanURL: https://unclenearest.com/live/
+  baseURL: https://unclenearest.com/wp-json/tribe/events/v1/
+  tags:
+  - Doc
+  properties:
+  - type: OpenAPI
+    url: openapi/uncle-nearest-doc-api-openapi.yml
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tribe/events/v1/doc
+  - type: Documentation
+    url: https://theeventscalendar.com/knowledgebase/the-events-calendar-rest-api/
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tec/v1/docs
+- aid: uncle-nearest:uncle-nearest-events-api
+  name: Uncle Nearest Events API
+  description: The Events API from Uncle Nearest — 7 operation(s) for events.
+  humanURL: https://unclenearest.com/live/
+  baseURL: https://unclenearest.com/wp-json/tribe/events/v1/
+  tags:
+  - Events
+  properties:
+  - type: OpenAPI
+    url: openapi/uncle-nearest-events-api-openapi.yml
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tribe/events/v1/doc
+  - type: Documentation
+    url: https://theeventscalendar.com/knowledgebase/the-events-calendar-rest-api/
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tec/v1/docs
+- aid: uncle-nearest:uncle-nearest-events-pro-api
+  name: Uncle Nearest Events Pro API
+  description: These operations are introduced by Events Pro.
+  humanURL: https://unclenearest.com/live/
+  baseURL: https://unclenearest.com/wp-json/tribe/events/v1/
+  tags:
+  - Events Pro
+  properties:
+  - type: OpenAPI
+    url: openapi/uncle-nearest-events-pro-api-openapi.yml
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tribe/events/v1/doc
+  - type: Documentation
+    url: https://theeventscalendar.com/knowledgebase/the-events-calendar-rest-api/
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tec/v1/docs
+- aid: uncle-nearest:uncle-nearest-organizers-api
+  name: Uncle Nearest Organizers API
+  description: The Organizers API from Uncle Nearest — 3 operation(s) for organizers.
+  humanURL: https://unclenearest.com/live/
+  baseURL: https://unclenearest.com/wp-json/tribe/events/v1/
+  tags:
+  - Organizers
+  properties:
+  - type: OpenAPI
+    url: openapi/uncle-nearest-organizers-api-openapi.yml
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tribe/events/v1/doc
+  - type: Documentation
+    url: https://theeventscalendar.com/knowledgebase/the-events-calendar-rest-api/
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tec/v1/docs
+- aid: uncle-nearest:uncle-nearest-tags-api
+  name: Uncle Nearest Tags API
+  description: The Tags API from Uncle Nearest — 2 operation(s) for tags.
+  humanURL: https://unclenearest.com/live/
+  baseURL: https://unclenearest.com/wp-json/tribe/events/v1/
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/uncle-nearest-tags-api-openapi.yml
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tribe/events/v1/doc
+  - type: Documentation
+    url: https://theeventscalendar.com/knowledgebase/the-events-calendar-rest-api/
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tec/v1/docs
+- aid: uncle-nearest:uncle-nearest-venues-api
+  name: Uncle Nearest Venues API
+  description: The Venues API from Uncle Nearest — 3 operation(s) for venues.
+  humanURL: https://unclenearest.com/live/
+  baseURL: https://unclenearest.com/wp-json/tribe/events/v1/
+  tags:
+  - Venues
+  properties:
+  - type: OpenAPI
+    url: openapi/uncle-nearest-venues-api-openapi.yml
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tribe/events/v1/doc
+  - type: Documentation
+    url: https://theeventscalendar.com/knowledgebase/the-events-calendar-rest-api/
+  - type: APIReference
+    url: https://unclenearest.com/wp-json/tec/v1/docs
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: MCPServer
+  url: mcp/uncle-nearest-mcp.yml
+- type: Overlay
+  url: overlays/uncle-nearest-events-calendar-v1-overlay.yaml
 - type: AgenticAccess
   url: agentic-access/uncle-nearest-agentic-access.yml
 - type: Website
