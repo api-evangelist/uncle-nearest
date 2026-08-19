@@ -1,0 +1,28 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Events Calendar REST Doc API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Doc",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /doc",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/doc"
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

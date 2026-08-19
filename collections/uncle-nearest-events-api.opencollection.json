@@ -1,0 +1,872 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Uncle Nearest Events API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/events",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "The archive page to return"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query",
+                "description": "The number of events to return on each page"
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query",
+                "description": "Events that start on the specified date"
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query",
+                "description": "Events that end on the specified date"
+              },
+              {
+                "name": "starts_before",
+                "value": "",
+                "type": "query",
+                "description": "Events that start before the specified date"
+              },
+              {
+                "name": "starts_after",
+                "value": "",
+                "type": "query",
+                "description": "Events that start after the specified date"
+              },
+              {
+                "name": "ends_before",
+                "value": "",
+                "type": "query",
+                "description": "Events that end before the specified date"
+              },
+              {
+                "name": "ends_after",
+                "value": "",
+                "type": "query",
+                "description": "Events that end after the specified date"
+              },
+              {
+                "name": "strict_dates",
+                "value": "",
+                "type": "query",
+                "description": "Dates set using the start_date/end_date, starts_*/ends_* are set to start at the specified times. The default behavior is to include the entire days."
+              },
+              {
+                "name": "search",
+                "value": "",
+                "type": "query",
+                "description": "Events should contain the specified string in the title or description"
+              },
+              {
+                "name": "categories",
+                "value": "",
+                "type": "query",
+                "description": "Events should be assigned one of the specified categories slugs or IDs"
+              },
+              {
+                "name": "tags",
+                "value": "",
+                "type": "query",
+                "description": "Events should be assigned one of the specified tags slugs or IDs"
+              },
+              {
+                "name": "venue",
+                "value": "",
+                "type": "query",
+                "description": "Events should be assigned one of the specified venue IDs"
+              },
+              {
+                "name": "organizer",
+                "value": "",
+                "type": "query",
+                "description": "Events should be assigned one of the specified organizer IDs"
+              },
+              {
+                "name": "featured",
+                "value": "",
+                "type": "query",
+                "description": "Events should be filtered by their featured status"
+              },
+              {
+                "name": "status",
+                "value": "",
+                "type": "query",
+                "description": "The event post status"
+              },
+              {
+                "name": "geoloc",
+                "value": "",
+                "type": "query",
+                "description": "Requires Events Calendar Pro. Events should be filtered by whether their venue has geolocation data"
+              },
+              {
+                "name": "geoloc_lat",
+                "value": "",
+                "type": "query",
+                "description": "Requires Events Calendar Pro. Events should be filtered by their venue latitude location, must also provide geoloc_lng"
+              },
+              {
+                "name": "geoloc_lng",
+                "value": "",
+                "type": "query",
+                "description": "Requires Events Calendar Pro. Events should be filtered by their venue longitude location, must also provide geoloc_lat"
+              },
+              {
+                "name": "include",
+                "value": "",
+                "type": "query",
+                "description": "Include events with one of the post IDs specified in the array of CSV list, date filters will be ignored."
+              },
+              {
+                "name": "post_parent",
+                "value": "",
+                "type": "query",
+                "description": "Events should be filtered by their post_parent being the specified one."
+              },
+              {
+                "name": "ticketed",
+                "value": "",
+                "type": "query",
+                "description": "Filter events with or without tickets."
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "Create an Event",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/events",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Creates a new event"
+        },
+        {
+          "info": {
+            "name": "GET /events/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/events/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "the event post ID"
+              },
+              {
+                "name": "password",
+                "value": "",
+                "type": "path",
+                "description": "The event password"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /events/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/events/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "the event post ID"
+              },
+              {
+                "name": "password",
+                "value": "",
+                "type": "path",
+                "description": "The event password"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "author",
+                  "value": ""
+                },
+                {
+                  "name": "date",
+                  "value": ""
+                },
+                {
+                  "name": "date_utc",
+                  "value": ""
+                },
+                {
+                  "name": "title",
+                  "value": ""
+                },
+                {
+                  "name": "description",
+                  "value": ""
+                },
+                {
+                  "name": "slug",
+                  "value": ""
+                },
+                {
+                  "name": "excerpt",
+                  "value": ""
+                },
+                {
+                  "name": "status",
+                  "value": ""
+                },
+                {
+                  "name": "timezone",
+                  "value": ""
+                },
+                {
+                  "name": "all_day",
+                  "value": ""
+                },
+                {
+                  "name": "start_date",
+                  "value": ""
+                },
+                {
+                  "name": "end_date",
+                  "value": ""
+                },
+                {
+                  "name": "image",
+                  "value": ""
+                },
+                {
+                  "name": "cost",
+                  "value": ""
+                },
+                {
+                  "name": "website",
+                  "value": ""
+                },
+                {
+                  "name": "show_map",
+                  "value": ""
+                },
+                {
+                  "name": "show_map_link",
+                  "value": ""
+                },
+                {
+                  "name": "hide_from_listings",
+                  "value": ""
+                },
+                {
+                  "name": "sticky",
+                  "value": ""
+                },
+                {
+                  "name": "featured",
+                  "value": ""
+                },
+                {
+                  "name": "categories",
+                  "value": ""
+                },
+                {
+                  "name": "tags",
+                  "value": ""
+                },
+                {
+                  "name": "venue",
+                  "value": ""
+                },
+                {
+                  "name": "organizer",
+                  "value": ""
+                }
+              ]
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "Update an Event",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/events/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "126",
+                "type": "path",
+                "description": "Unique identifier for the event."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Updates an existing event"
+        },
+        {
+          "info": {
+            "name": "DELETE /events/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/events/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "the event post ID"
+              },
+              {
+                "name": "password",
+                "value": "",
+                "type": "path",
+                "description": "The event password"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /events/by-slug/{slug}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/events/by-slug/:slug",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "the event post name"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /events/by-slug/{slug}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/events/by-slug/:slug",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "the event post name"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "author",
+                  "value": ""
+                },
+                {
+                  "name": "date",
+                  "value": ""
+                },
+                {
+                  "name": "date_utc",
+                  "value": ""
+                },
+                {
+                  "name": "title",
+                  "value": ""
+                },
+                {
+                  "name": "description",
+                  "value": ""
+                },
+                {
+                  "name": "slug",
+                  "value": ""
+                },
+                {
+                  "name": "excerpt",
+                  "value": ""
+                },
+                {
+                  "name": "status",
+                  "value": ""
+                },
+                {
+                  "name": "timezone",
+                  "value": ""
+                },
+                {
+                  "name": "all_day",
+                  "value": ""
+                },
+                {
+                  "name": "start_date",
+                  "value": ""
+                },
+                {
+                  "name": "end_date",
+                  "value": ""
+                },
+                {
+                  "name": "image",
+                  "value": ""
+                },
+                {
+                  "name": "cost",
+                  "value": ""
+                },
+                {
+                  "name": "website",
+                  "value": ""
+                },
+                {
+                  "name": "show_map",
+                  "value": ""
+                },
+                {
+                  "name": "show_map_link",
+                  "value": ""
+                },
+                {
+                  "name": "hide_from_listings",
+                  "value": ""
+                },
+                {
+                  "name": "sticky",
+                  "value": ""
+                },
+                {
+                  "name": "featured",
+                  "value": ""
+                },
+                {
+                  "name": "categories",
+                  "value": ""
+                },
+                {
+                  "name": "tags",
+                  "value": ""
+                },
+                {
+                  "name": "venue",
+                  "value": ""
+                },
+                {
+                  "name": "organizer",
+                  "value": ""
+                }
+              ]
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /events/by-slug/{slug}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/events/by-slug/:slug",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "the event post name"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "Get organizers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/organizers",
+            "params": [
+              {
+                "name": "page",
+                "value": "1",
+                "type": "query",
+                "description": "The collection page number."
+              },
+              {
+                "name": "per_page",
+                "value": "51",
+                "type": "query",
+                "description": "Maximum number of items to be returned in result set."
+              },
+              {
+                "name": "search",
+                "value": "Example",
+                "type": "query",
+                "description": "Limit results to those matching a string."
+              },
+              {
+                "name": "event",
+                "value": "126",
+                "type": "query",
+                "description": "Limit result set to organizers with specific event."
+              },
+              {
+                "name": "has_events",
+                "value": "true",
+                "type": "query",
+                "description": "Limit result set to organizers with events."
+              },
+              {
+                "name": "only_with_upcoming",
+                "value": "true",
+                "type": "query",
+                "description": "Limit result set to organizers with upcoming events."
+              },
+              {
+                "name": "status",
+                "value": "publish",
+                "type": "query",
+                "description": "Limit result set to organizers with specific status."
+              }
+            ]
+          },
+          "docs": "Returns a list of organizers"
+        },
+        {
+          "info": {
+            "name": "Create an Organizer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/organizers",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Creates a new organizer"
+        },
+        {
+          "info": {
+            "name": "Retrieve an Organizer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/organizers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "126",
+                "type": "path",
+                "description": "Unique identifier for the organizer."
+              }
+            ]
+          },
+          "docs": "Returns a single organizer"
+        },
+        {
+          "info": {
+            "name": "Update an Organizer",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/organizers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "126",
+                "type": "path",
+                "description": "Unique identifier for the organizer."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Updates an existing organizer"
+        },
+        {
+          "info": {
+            "name": "Delete an Organizer",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/organizers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "126",
+                "type": "path",
+                "description": "Unique identifier for the organizer."
+              },
+              {
+                "name": "force",
+                "value": "true",
+                "type": "query",
+                "description": "Whether to bypass Trash and force deletion."
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Deletes an existing organizer"
+        },
+        {
+          "info": {
+            "name": "Get venues",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/venues",
+            "params": [
+              {
+                "name": "page",
+                "value": "1",
+                "type": "query",
+                "description": "The collection page number."
+              },
+              {
+                "name": "per_page",
+                "value": "51",
+                "type": "query",
+                "description": "Maximum number of items to be returned in result set."
+              },
+              {
+                "name": "search",
+                "value": "Example",
+                "type": "query",
+                "description": "Limit results to those matching a string."
+              },
+              {
+                "name": "event",
+                "value": "126",
+                "type": "query",
+                "description": "Limit result set to venues with specific event."
+              },
+              {
+                "name": "has_events",
+                "value": "true",
+                "type": "query",
+                "description": "Limit result set to venues with events."
+              },
+              {
+                "name": "only_with_upcoming",
+                "value": "true",
+                "type": "query",
+                "description": "Limit result set to venues with upcoming events."
+              },
+              {
+                "name": "status",
+                "value": "publish",
+                "type": "query",
+                "description": "Limit result set to venues with specific status."
+              },
+              {
+                "name": "geoloc_lat",
+                "value": "37.774929",
+                "type": "query",
+                "description": "The latitude of the venue"
+              },
+              {
+                "name": "geoloc_lng",
+                "value": "-122.419416",
+                "type": "query",
+                "description": "The longitude of the venue"
+              },
+              {
+                "name": "distance",
+                "value": "10",
+                "type": "query",
+                "description": "The distance of the venues relative to the geolocation"
+              },
+              {
+                "name": "has_geoloc",
+                "value": "true",
+                "type": "query",
+                "description": "Filter by venues that have geolocation data"
+              },
+              {
+                "name": "near",
+                "value": "San Francisco, CA",
+                "type": "query",
+                "description": "Filter by venues near an address"
+              }
+            ]
+          },
+          "docs": "Returns a list of venues"
+        },
+        {
+          "info": {
+            "name": "Create a Venue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/venues",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Creates a new venue"
+        },
+        {
+          "info": {
+            "name": "Retrieve a Venue",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/venues/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "126",
+                "type": "path",
+                "description": "Unique identifier for the venue."
+              }
+            ]
+          },
+          "docs": "Returns a single venue"
+        },
+        {
+          "info": {
+            "name": "Update a Venue",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/venues/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "126",
+                "type": "path",
+                "description": "Unique identifier for the venue."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Updates an existing venue"
+        },
+        {
+          "info": {
+            "name": "Delete a Venue",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/venues/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "126",
+                "type": "path",
+                "description": "Unique identifier for the venue."
+              },
+              {
+                "name": "force",
+                "value": "true",
+                "type": "query",
+                "description": "Whether to bypass Trash and force deletion."
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Deletes an existing venue"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

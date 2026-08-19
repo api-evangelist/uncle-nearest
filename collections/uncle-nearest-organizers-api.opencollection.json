@@ -1,0 +1,278 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Events Calendar REST Organizers API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Organizers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /organizers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/organizers",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "The archive page to return"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query",
+                "description": "The number of organizers to return on each page"
+              },
+              {
+                "name": "search",
+                "value": "",
+                "type": "query",
+                "description": "Organizers should contain the specified string in the title, description or custom fields"
+              },
+              {
+                "name": "event",
+                "value": "",
+                "type": "query",
+                "description": "Organizers should be related to this event"
+              },
+              {
+                "name": "has_events",
+                "value": "",
+                "type": "query",
+                "description": "Organizers should have events associated to them"
+              },
+              {
+                "name": "only_with_upcoming",
+                "value": "",
+                "type": "query",
+                "description": "Organizers should have upcoming events associated to them"
+              },
+              {
+                "name": "status",
+                "value": "",
+                "type": "query",
+                "description": "The organizer post status"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /organizers/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/organizers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "the organizer post ID"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /organizers/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/organizers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "the organizer post ID"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "id",
+                  "value": ""
+                },
+                {
+                  "name": "author",
+                  "value": ""
+                },
+                {
+                  "name": "date",
+                  "value": ""
+                },
+                {
+                  "name": "date_utc",
+                  "value": ""
+                },
+                {
+                  "name": "organizer",
+                  "value": ""
+                },
+                {
+                  "name": "description",
+                  "value": ""
+                },
+                {
+                  "name": "status",
+                  "value": ""
+                },
+                {
+                  "name": "phone",
+                  "value": ""
+                },
+                {
+                  "name": "website",
+                  "value": ""
+                },
+                {
+                  "name": "email",
+                  "value": ""
+                },
+                {
+                  "name": "image",
+                  "value": ""
+                }
+              ]
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /organizers/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/organizers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "the organizer post ID"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /organizers/by-slug/{slug}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/organizers/by-slug/:slug",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "the organizer post name"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /organizers/by-slug/{slug}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/organizers/by-slug/:slug",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "the organizer post name"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "slug",
+                  "value": ""
+                },
+                {
+                  "name": "author",
+                  "value": ""
+                },
+                {
+                  "name": "date",
+                  "value": ""
+                },
+                {
+                  "name": "date_utc",
+                  "value": ""
+                },
+                {
+                  "name": "organizer",
+                  "value": ""
+                },
+                {
+                  "name": "description",
+                  "value": ""
+                },
+                {
+                  "name": "status",
+                  "value": ""
+                },
+                {
+                  "name": "phone",
+                  "value": ""
+                },
+                {
+                  "name": "website",
+                  "value": ""
+                },
+                {
+                  "name": "email",
+                  "value": ""
+                },
+                {
+                  "name": "image",
+                  "value": ""
+                }
+              ]
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /organizers/by-slug/{slug}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/organizers/by-slug/:slug",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "the organizer post name"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

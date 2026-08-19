@@ -1,0 +1,181 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Events Calendar REST Categories API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Categories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/categories",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "The archive page to return"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query",
+                "description": "The number of event categories to return on each page"
+              },
+              {
+                "name": "search",
+                "value": "",
+                "type": "query",
+                "description": "Limit results to those matching a string"
+              },
+              {
+                "name": "exclude",
+                "value": "",
+                "type": "query",
+                "description": "Ensure result set exclude specific IDs"
+              },
+              {
+                "name": "include",
+                "value": "",
+                "type": "query",
+                "description": "Limit result set to specific IDs"
+              },
+              {
+                "name": "order",
+                "value": "",
+                "type": "query",
+                "description": "Order sort attribute ascending or descending"
+              },
+              {
+                "name": "orderby",
+                "value": "",
+                "type": "query",
+                "description": "Sort collection by term attribute"
+              },
+              {
+                "name": "hide_empty",
+                "value": "",
+                "type": "query",
+                "description": "Whether to hide terms not assigned to any posts"
+              },
+              {
+                "name": "parent",
+                "value": "",
+                "type": "query",
+                "description": "Limit result set to terms assigned to a specific parent"
+              },
+              {
+                "name": "post",
+                "value": "",
+                "type": "query",
+                "description": "Limit result set to terms assigned to a specific post"
+              },
+              {
+                "name": "event",
+                "value": "",
+                "type": "query",
+                "description": "Limit result set to terms assigned to a specific event (an alias of the \"post\" parameter)"
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "query",
+                "description": "Limit result set to terms with a specific slug"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /categories/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/categories/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "the event category term ID"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /categories/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/categories/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "the event category term ID"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "id",
+                  "value": ""
+                },
+                {
+                  "name": "name",
+                  "value": ""
+                },
+                {
+                  "name": "description",
+                  "value": ""
+                },
+                {
+                  "name": "slug",
+                  "value": ""
+                },
+                {
+                  "name": "parent",
+                  "value": ""
+                }
+              ]
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /categories/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/categories/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "the event category term ID"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

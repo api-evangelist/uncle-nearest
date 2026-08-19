@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Events Calendar REST Events Pro API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Events Pro",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve Series",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tec/v1/series",
+            "params": [
+              {
+                "name": "page",
+                "value": "1",
+                "type": "query",
+                "description": "The collection page number."
+              },
+              {
+                "name": "event_post_id",
+                "value": "126",
+                "type": "query",
+                "description": "Limit result set to series assigned to specific event post IDs."
+              },
+              {
+                "name": "per_page",
+                "value": "51",
+                "type": "query",
+                "description": "Maximum number of items to be returned in result set."
+              },
+              {
+                "name": "search",
+                "value": "Example",
+                "type": "query",
+                "description": "Limit results to those matching a string."
+              },
+              {
+                "name": "status",
+                "value": "publish",
+                "type": "query",
+                "description": "Limit result set to events with specific status."
+              },
+              {
+                "name": "ticketed",
+                "value": "true",
+                "type": "query",
+                "description": "Limit result set to events with tickets."
+              },
+              {
+                "name": "orderby",
+                "value": "date",
+                "type": "query",
+                "description": "Sort collection by event attribute."
+              },
+              {
+                "name": "order",
+                "value": "ASC",
+                "type": "query",
+                "description": "Order sort attribute ascending or descending."
+              }
+            ]
+          },
+          "docs": "Returns a list of series"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

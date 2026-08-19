@@ -1,0 +1,2264 @@
+{
+  "item": [
+    {
+      "id": "1fb0773e-84db-486c-a466-a8e7f692a5df",
+      "name": "Organizers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "eecc20fd-e96d-4293-b7c9-7990bc04dd5e",
+          "name": "/organizers",
+          "request": {
+            "name": "/organizers",
+            "description": {},
+            "url": {
+              "path": [
+                "organizers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "The archive page to return"
+                },
+                {
+                  "disabled": false,
+                  "key": "per_page",
+                  "value": "<integer>",
+                  "description": "The number of organizers to return on each page"
+                },
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>",
+                  "description": "Organizers should contain the specified string in the title, description or custom fields"
+                },
+                {
+                  "disabled": false,
+                  "key": "event",
+                  "value": "<integer>",
+                  "description": "Organizers should be related to this event"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_events",
+                  "value": "<boolean>",
+                  "description": "Organizers should have events associated to them"
+                },
+                {
+                  "disabled": false,
+                  "key": "only_with_upcoming",
+                  "value": "<boolean>",
+                  "description": "Organizers should have upcoming events associated to them"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>",
+                  "description": "The organizer post status"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2581c336-5fcb-4f1d-b363-1cc6ed957b54",
+              "name": "Returns all the organizers matching the search criteria",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "event",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "has_events",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "only_with_upcoming",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "status",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 3633,\n    \"global_id\": \"string\",\n    \"global_id_lineage\": [\n      \"string\",\n      \"string\"\n    ],\n    \"author\": 3718,\n    \"date\": \"string\",\n    \"date_utc\": \"string\",\n    \"modified\": \"string\",\n    \"modified_utc\": \"string\",\n    \"status\": \"string\",\n    \"url\": \"string\",\n    \"organizer\": \"string\",\n    \"description\": \"string\",\n    \"excerpt\": \"string\",\n    \"slug\": \"string\",\n    \"image\": {\n      \"url\": \"http://QXsTkdQiTNqvtcdMcgstIMQieYl.jtayWv+dFNxPIX2hd5DVhftYtmQx2Uf7PyoSz3WV46kQKYsN\",\n      \"id\": 5380,\n      \"extension\": \"string\",\n      \"width\": 1961,\n      \"height\": 2945,\n      \"sizes\": [\n        {\n          \"width\": 2189,\n          \"height\": 70,\n          \"mime-type\": \"string\",\n          \"url\": \"http://wFLWohwNRI.wcrz6B0,aKKQ1KZxKvtUjF+JNC.Vi343.Ya,nkzfNLMlL+\"\n        },\n        {\n          \"width\": 4743,\n          \"height\": 5722,\n          \"mime-type\": \"string\",\n          \"url\": \"https://qfYvqIlOgCQTWqmrGVXHMG.hgMLo+NPBxlto0Z3IsPvAQOZwLUD7ZeKAD\"\n        }\n      ]\n    },\n    \"phone\": \"string\",\n    \"website\": \"string\",\n    \"email\": \"string\"\n  },\n  {\n    \"id\": 356,\n    \"global_id\": \"string\",\n    \"global_id_lineage\": [\n      \"string\",\n      \"string\"\n    ],\n    \"author\": 6853,\n    \"date\": \"string\",\n    \"date_utc\": \"string\",\n    \"modified\": \"string\",\n    \"modified_utc\": \"string\",\n    \"status\": \"string\",\n    \"url\": \"string\",\n    \"organizer\": \"string\",\n    \"description\": \"string\",\n    \"excerpt\": \"string\",\n    \"slug\": \"string\",\n    \"image\": {\n      \"url\": \"http://qnYHivRUZSDERLCOQt.rhuZXwo,\",\n      \"id\": 9494,\n      \"extension\": \"string\",\n      \"width\": 3499,\n      \"height\": 826,\n      \"sizes\": [\n        {\n          \"width\": 3867,\n          \"height\": 2703,\n          \"mime-type\": \"string\",\n          \"url\": \"https://KePcunYwzYWfWqbiPajiLyBGptt.dyoGHCW.Elh.O5Mph6hviltExJ\"\n        },\n        {\n          \"width\": 321,\n          \"height\": 687,\n          \"mime-type\": \"string\",\n          \"url\": \"http://OXOxizoOSlQxdNLaWpds.cyxbfYu8LtCn6iD7CLMYuc.xeypoHEMcUWH,XhtKYfGrpkAp\"\n        }\n      ]\n    },\n    \"phone\": \"string\",\n    \"website\": \"string\",\n    \"email\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "52dab042-8437-4f5d-977c-608cb0ebdc72",
+              "name": "One or more of the specified query variables has a bad format",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "event",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "has_events",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "only_with_upcoming",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "status",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "babc19c6-7c20-4482-a94b-d978323810e2",
+              "name": "The requested page was not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "event",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "has_events",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "only_with_upcoming",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "status",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8958708e-01f8-4d19-a008-b2d8acc51c43",
+          "name": "/organizers/:id",
+          "request": {
+            "name": "/organizers/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "organizers",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) the organizer post ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "af89b2db-7927-4db4-ab10-d815b64fad83",
+              "name": "Returns the data of the organizer with the specified post ID",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the organizer post ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 4958,\n  \"global_id\": \"string\",\n  \"global_id_lineage\": [\n    \"string\",\n    \"string\"\n  ],\n  \"author\": 3443,\n  \"date\": \"string\",\n  \"date_utc\": \"string\",\n  \"modified\": \"string\",\n  \"modified_utc\": \"string\",\n  \"status\": \"string\",\n  \"url\": \"string\",\n  \"organizer\": \"string\",\n  \"description\": \"string\",\n  \"excerpt\": \"string\",\n  \"slug\": \"string\",\n  \"image\": {\n    \"url\": \"http://bgsGsNxirbn.syaqkPe-gh,LVzBQ.qHNybD3Gh6,LmaA1UKE9\",\n    \"id\": 887,\n    \"extension\": \"string\",\n    \"width\": 9652,\n    \"height\": 8297,\n    \"sizes\": [\n      {\n        \"width\": 4496,\n        \"height\": 9289,\n        \"mime-type\": \"string\",\n        \"url\": \"http://cAdbZxkCqaK.oyzMq+kpS5yS\"\n      },\n      {\n        \"width\": 1261,\n        \"height\": 7906,\n        \"mime-type\": \"string\",\n        \"url\": \"https://BBNfFGEvWwxsBVfAqoVk.lnqjDmQKw3ebO3VhMjc\"\n      }\n    ]\n  },\n  \"phone\": \"string\",\n  \"website\": \"string\",\n  \"email\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a18654a2-737a-4ac2-8d1f-568372f011a9",
+              "name": "The organizer post ID is missing.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the organizer post ID"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "05dd9126-c812-4edf-b9dd-ec5af82921a7",
+              "name": "The organizer with the specified ID is not accessible.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the organizer post ID"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ac04821a-bd2f-4e12-be74-a34e8b619048",
+              "name": "An organizer with the specified event does not exist.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the organizer post ID"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1dc887f4-92ae-473d-bc6e-5e707a5df184",
+          "name": "/organizers/:id",
+          "request": {
+            "name": "/organizers/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "organizers",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) the organizer post ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<integer>",
+                  "description": "the organizer post ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "author",
+                  "value": "<integer>",
+                  "description": "The organizer author ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<string>",
+                  "description": "The organizer publication date"
+                },
+                {
+                  "disabled": false,
+                  "key": "date_utc",
+                  "value": "<string>",
+                  "description": "The organizer publication date (UTC time zone)"
+                },
+                {
+                  "disabled": false,
+                  "key": "organizer",
+                  "value": "<string>",
+                  "description": "The organizer name"
+                },
+                {
+                  "disabled": false,
+                  "key": "description",
+                  "value": "<string>",
+                  "description": "The organizer description"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>",
+                  "description": "The organizer post status"
+                },
+                {
+                  "disabled": false,
+                  "key": "phone",
+                  "value": "<string>",
+                  "description": "The organizer phone number"
+                },
+                {
+                  "disabled": false,
+                  "key": "website",
+                  "value": "<string>",
+                  "description": "The organizer website"
+                },
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<string>",
+                  "description": "The organizer e-mail address"
+                },
+                {
+                  "disabled": false,
+                  "key": "image",
+                  "value": "<string>",
+                  "description": "The organizer featured image ID or URL"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ddca5110-9682-44a3-98e7-18fd685c57e5",
+              "name": "Returns the data of the created organizer",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the organizer post ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "the organizer post ID",
+                        "type": "text/plain"
+                      },
+                      "key": "id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer author ID",
+                        "type": "text/plain"
+                      },
+                      "key": "author",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer publication date",
+                        "type": "text/plain"
+                      },
+                      "key": "date",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer publication date (UTC time zone)",
+                        "type": "text/plain"
+                      },
+                      "key": "date_utc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer name",
+                        "type": "text/plain"
+                      },
+                      "key": "organizer",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer description",
+                        "type": "text/plain"
+                      },
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer post status",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer phone number",
+                        "type": "text/plain"
+                      },
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer website",
+                        "type": "text/plain"
+                      },
+                      "key": "website",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer e-mail address",
+                        "type": "text/plain"
+                      },
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer featured image ID or URL",
+                        "type": "text/plain"
+                      },
+                      "key": "image",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 4958,\n  \"global_id\": \"string\",\n  \"global_id_lineage\": [\n    \"string\",\n    \"string\"\n  ],\n  \"author\": 3443,\n  \"date\": \"string\",\n  \"date_utc\": \"string\",\n  \"modified\": \"string\",\n  \"modified_utc\": \"string\",\n  \"status\": \"string\",\n  \"url\": \"string\",\n  \"organizer\": \"string\",\n  \"description\": \"string\",\n  \"excerpt\": \"string\",\n  \"slug\": \"string\",\n  \"image\": {\n    \"url\": \"http://bgsGsNxirbn.syaqkPe-gh,LVzBQ.qHNybD3Gh6,LmaA1UKE9\",\n    \"id\": 887,\n    \"extension\": \"string\",\n    \"width\": 9652,\n    \"height\": 8297,\n    \"sizes\": [\n      {\n        \"width\": 4496,\n        \"height\": 9289,\n        \"mime-type\": \"string\",\n        \"url\": \"http://cAdbZxkCqaK.oyzMq+kpS5yS\"\n      },\n      {\n        \"width\": 1261,\n        \"height\": 7906,\n        \"mime-type\": \"string\",\n        \"url\": \"https://BBNfFGEvWwxsBVfAqoVk.lnqjDmQKw3ebO3VhMjc\"\n      }\n    ]\n  },\n  \"phone\": \"string\",\n  \"website\": \"string\",\n  \"email\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5d7bd8e6-71ab-4fd4-aec7-64b186244d03",
+              "name": "A required parameter is missing or an input parameter is in the wrong format",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the organizer post ID"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "the organizer post ID",
+                        "type": "text/plain"
+                      },
+                      "key": "id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer author ID",
+                        "type": "text/plain"
+                      },
+                      "key": "author",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer publication date",
+                        "type": "text/plain"
+                      },
+                      "key": "date",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer publication date (UTC time zone)",
+                        "type": "text/plain"
+                      },
+                      "key": "date_utc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer name",
+                        "type": "text/plain"
+                      },
+                      "key": "organizer",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer description",
+                        "type": "text/plain"
+                      },
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer post status",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer phone number",
+                        "type": "text/plain"
+                      },
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer website",
+                        "type": "text/plain"
+                      },
+                      "key": "website",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer e-mail address",
+                        "type": "text/plain"
+                      },
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer featured image ID or URL",
+                        "type": "text/plain"
+                      },
+                      "key": "image",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ef23198b-2613-4720-8a80-63a3f6313632",
+              "name": "The user is not authorized to create organizers",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the organizer post ID"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "the organizer post ID",
+                        "type": "text/plain"
+                      },
+                      "key": "id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer author ID",
+                        "type": "text/plain"
+                      },
+                      "key": "author",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer publication date",
+                        "type": "text/plain"
+                      },
+                      "key": "date",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer publication date (UTC time zone)",
+                        "type": "text/plain"
+                      },
+                      "key": "date_utc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer name",
+                        "type": "text/plain"
+                      },
+                      "key": "organizer",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer description",
+                        "type": "text/plain"
+                      },
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer post status",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer phone number",
+                        "type": "text/plain"
+                      },
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer website",
+                        "type": "text/plain"
+                      },
+                      "key": "website",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer e-mail address",
+                        "type": "text/plain"
+                      },
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer featured image ID or URL",
+                        "type": "text/plain"
+                      },
+                      "key": "image",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fa5be9e2-c95d-471b-aa62-ca578069bc97",
+          "name": "/organizers/:id",
+          "request": {
+            "name": "/organizers/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "organizers",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) the organizer post ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d0790e0d-80ec-411b-8988-0d54434086a9",
+              "name": "Deletes an organizer and returns its data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the organizer post ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 4958,\n  \"global_id\": \"string\",\n  \"global_id_lineage\": [\n    \"string\",\n    \"string\"\n  ],\n  \"author\": 3443,\n  \"date\": \"string\",\n  \"date_utc\": \"string\",\n  \"modified\": \"string\",\n  \"modified_utc\": \"string\",\n  \"status\": \"string\",\n  \"url\": \"string\",\n  \"organizer\": \"string\",\n  \"description\": \"string\",\n  \"excerpt\": \"string\",\n  \"slug\": \"string\",\n  \"image\": {\n    \"url\": \"http://bgsGsNxirbn.syaqkPe-gh,LVzBQ.qHNybD3Gh6,LmaA1UKE9\",\n    \"id\": 887,\n    \"extension\": \"string\",\n    \"width\": 9652,\n    \"height\": 8297,\n    \"sizes\": [\n      {\n        \"width\": 4496,\n        \"height\": 9289,\n        \"mime-type\": \"string\",\n        \"url\": \"http://cAdbZxkCqaK.oyzMq+kpS5yS\"\n      },\n      {\n        \"width\": 1261,\n        \"height\": 7906,\n        \"mime-type\": \"string\",\n        \"url\": \"https://BBNfFGEvWwxsBVfAqoVk.lnqjDmQKw3ebO3VhMjc\"\n      }\n    ]\n  },\n  \"phone\": \"string\",\n  \"website\": \"string\",\n  \"email\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "95b33e2d-6f3d-4c9a-a168-00099d404413",
+              "name": "The organizer post ID is missing or does not exist.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the organizer post ID"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "be70882c-7fc3-49fd-b432-9bb5fe419578",
+              "name": "The current user cannot delete the organizer with the specified ID.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the organizer post ID"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d3c61246-4e01-45b6-8d53-9e452d224579",
+              "name": "The organizer with the specified ID has been deleted already.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the organizer post ID"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Gone",
+              "code": 410,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f153e60a-dfad-4f44-93b3-0b003a1772bb",
+              "name": "The organizer with the specified ID could not be deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the organizer post ID"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "21261d08-dd5e-43f5-91fc-6f3e53e3746b",
+          "name": "/organizers/by-slug/:slug",
+          "request": {
+            "name": "/organizers/by-slug/:slug",
+            "description": {},
+            "url": {
+              "path": [
+                "organizers",
+                "by-slug",
+                ":slug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) the organizer post name"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "675693b2-0ef7-4cf6-b71a-5fe3b4aeacc3",
+              "name": "Returns the data of the organizer with the specified post ID",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the organizer post name"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 4958,\n  \"global_id\": \"string\",\n  \"global_id_lineage\": [\n    \"string\",\n    \"string\"\n  ],\n  \"author\": 3443,\n  \"date\": \"string\",\n  \"date_utc\": \"string\",\n  \"modified\": \"string\",\n  \"modified_utc\": \"string\",\n  \"status\": \"string\",\n  \"url\": \"string\",\n  \"organizer\": \"string\",\n  \"description\": \"string\",\n  \"excerpt\": \"string\",\n  \"slug\": \"string\",\n  \"image\": {\n    \"url\": \"http://bgsGsNxirbn.syaqkPe-gh,LVzBQ.qHNybD3Gh6,LmaA1UKE9\",\n    \"id\": 887,\n    \"extension\": \"string\",\n    \"width\": 9652,\n    \"height\": 8297,\n    \"sizes\": [\n      {\n        \"width\": 4496,\n        \"height\": 9289,\n        \"mime-type\": \"string\",\n        \"url\": \"http://cAdbZxkCqaK.oyzMq+kpS5yS\"\n      },\n      {\n        \"width\": 1261,\n        \"height\": 7906,\n        \"mime-type\": \"string\",\n        \"url\": \"https://BBNfFGEvWwxsBVfAqoVk.lnqjDmQKw3ebO3VhMjc\"\n      }\n    ]\n  },\n  \"phone\": \"string\",\n  \"website\": \"string\",\n  \"email\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9c3b0d05-5762-4640-ac86-2e19ea1f3525",
+              "name": "The organizer post ID is missing.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the organizer post name"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "637ed0ce-486a-483f-9562-91dca293460c",
+              "name": "The organizer with the specified ID is not accessible.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the organizer post name"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b69bed6d-9b93-4321-9ac4-7f583a0f82ae",
+              "name": "An organizer with the specified event does not exist.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the organizer post name"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "438f008c-11c2-4153-9e13-96ecca663ea5",
+          "name": "/organizers/by-slug/:slug",
+          "request": {
+            "name": "/organizers/by-slug/:slug",
+            "description": {},
+            "url": {
+              "path": [
+                "organizers",
+                "by-slug",
+                ":slug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) the organizer post name"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "slug",
+                  "value": "<string>",
+                  "description": "the organizer post name"
+                },
+                {
+                  "disabled": false,
+                  "key": "author",
+                  "value": "<integer>",
+                  "description": "The organizer author ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<string>",
+                  "description": "The organizer publication date"
+                },
+                {
+                  "disabled": false,
+                  "key": "date_utc",
+                  "value": "<string>",
+                  "description": "The organizer publication date (UTC time zone)"
+                },
+                {
+                  "disabled": false,
+                  "key": "organizer",
+                  "value": "<string>",
+                  "description": "The organizer name"
+                },
+                {
+                  "disabled": false,
+                  "key": "description",
+                  "value": "<string>",
+                  "description": "The organizer description"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>",
+                  "description": "The organizer post status"
+                },
+                {
+                  "disabled": false,
+                  "key": "phone",
+                  "value": "<string>",
+                  "description": "The organizer phone number"
+                },
+                {
+                  "disabled": false,
+                  "key": "website",
+                  "value": "<string>",
+                  "description": "The organizer website"
+                },
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<string>",
+                  "description": "The organizer e-mail address"
+                },
+                {
+                  "disabled": false,
+                  "key": "image",
+                  "value": "<string>",
+                  "description": "The organizer featured image ID or URL"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f1e84123-d324-4b35-b4da-297349fbe8bc",
+              "name": "Returns the data of the created organizer",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the organizer post name"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "the organizer post name",
+                        "type": "text/plain"
+                      },
+                      "key": "slug",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer author ID",
+                        "type": "text/plain"
+                      },
+                      "key": "author",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer publication date",
+                        "type": "text/plain"
+                      },
+                      "key": "date",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer publication date (UTC time zone)",
+                        "type": "text/plain"
+                      },
+                      "key": "date_utc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer name",
+                        "type": "text/plain"
+                      },
+                      "key": "organizer",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer description",
+                        "type": "text/plain"
+                      },
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer post status",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer phone number",
+                        "type": "text/plain"
+                      },
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer website",
+                        "type": "text/plain"
+                      },
+                      "key": "website",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer e-mail address",
+                        "type": "text/plain"
+                      },
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer featured image ID or URL",
+                        "type": "text/plain"
+                      },
+                      "key": "image",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 4958,\n  \"global_id\": \"string\",\n  \"global_id_lineage\": [\n    \"string\",\n    \"string\"\n  ],\n  \"author\": 3443,\n  \"date\": \"string\",\n  \"date_utc\": \"string\",\n  \"modified\": \"string\",\n  \"modified_utc\": \"string\",\n  \"status\": \"string\",\n  \"url\": \"string\",\n  \"organizer\": \"string\",\n  \"description\": \"string\",\n  \"excerpt\": \"string\",\n  \"slug\": \"string\",\n  \"image\": {\n    \"url\": \"http://bgsGsNxirbn.syaqkPe-gh,LVzBQ.qHNybD3Gh6,LmaA1UKE9\",\n    \"id\": 887,\n    \"extension\": \"string\",\n    \"width\": 9652,\n    \"height\": 8297,\n    \"sizes\": [\n      {\n        \"width\": 4496,\n        \"height\": 9289,\n        \"mime-type\": \"string\",\n        \"url\": \"http://cAdbZxkCqaK.oyzMq+kpS5yS\"\n      },\n      {\n        \"width\": 1261,\n        \"height\": 7906,\n        \"mime-type\": \"string\",\n        \"url\": \"https://BBNfFGEvWwxsBVfAqoVk.lnqjDmQKw3ebO3VhMjc\"\n      }\n    ]\n  },\n  \"phone\": \"string\",\n  \"website\": \"string\",\n  \"email\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8aff6da2-4651-4ed1-b9af-361917c07e06",
+              "name": "A required parameter is missing or an input parameter is in the wrong format",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the organizer post name"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "the organizer post name",
+                        "type": "text/plain"
+                      },
+                      "key": "slug",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer author ID",
+                        "type": "text/plain"
+                      },
+                      "key": "author",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer publication date",
+                        "type": "text/plain"
+                      },
+                      "key": "date",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer publication date (UTC time zone)",
+                        "type": "text/plain"
+                      },
+                      "key": "date_utc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer name",
+                        "type": "text/plain"
+                      },
+                      "key": "organizer",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer description",
+                        "type": "text/plain"
+                      },
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer post status",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer phone number",
+                        "type": "text/plain"
+                      },
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer website",
+                        "type": "text/plain"
+                      },
+                      "key": "website",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer e-mail address",
+                        "type": "text/plain"
+                      },
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer featured image ID or URL",
+                        "type": "text/plain"
+                      },
+                      "key": "image",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "05cd3744-3a82-4b3a-b678-c44befff7253",
+              "name": "The user is not authorized to create organizers",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the organizer post name"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "the organizer post name",
+                        "type": "text/plain"
+                      },
+                      "key": "slug",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer author ID",
+                        "type": "text/plain"
+                      },
+                      "key": "author",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer publication date",
+                        "type": "text/plain"
+                      },
+                      "key": "date",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer publication date (UTC time zone)",
+                        "type": "text/plain"
+                      },
+                      "key": "date_utc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer name",
+                        "type": "text/plain"
+                      },
+                      "key": "organizer",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer description",
+                        "type": "text/plain"
+                      },
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer post status",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer phone number",
+                        "type": "text/plain"
+                      },
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer website",
+                        "type": "text/plain"
+                      },
+                      "key": "website",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer e-mail address",
+                        "type": "text/plain"
+                      },
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer featured image ID or URL",
+                        "type": "text/plain"
+                      },
+                      "key": "image",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "78b1e8ee-62dc-4313-a3ac-70fb15c28456",
+          "name": "/organizers/by-slug/:slug",
+          "request": {
+            "name": "/organizers/by-slug/:slug",
+            "description": {},
+            "url": {
+              "path": [
+                "organizers",
+                "by-slug",
+                ":slug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) the organizer post name"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ea4081bc-ca48-4e07-8911-6cdefaab3167",
+              "name": "Deletes an organizer and returns its data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the organizer post name"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 4958,\n  \"global_id\": \"string\",\n  \"global_id_lineage\": [\n    \"string\",\n    \"string\"\n  ],\n  \"author\": 3443,\n  \"date\": \"string\",\n  \"date_utc\": \"string\",\n  \"modified\": \"string\",\n  \"modified_utc\": \"string\",\n  \"status\": \"string\",\n  \"url\": \"string\",\n  \"organizer\": \"string\",\n  \"description\": \"string\",\n  \"excerpt\": \"string\",\n  \"slug\": \"string\",\n  \"image\": {\n    \"url\": \"http://bgsGsNxirbn.syaqkPe-gh,LVzBQ.qHNybD3Gh6,LmaA1UKE9\",\n    \"id\": 887,\n    \"extension\": \"string\",\n    \"width\": 9652,\n    \"height\": 8297,\n    \"sizes\": [\n      {\n        \"width\": 4496,\n        \"height\": 9289,\n        \"mime-type\": \"string\",\n        \"url\": \"http://cAdbZxkCqaK.oyzMq+kpS5yS\"\n      },\n      {\n        \"width\": 1261,\n        \"height\": 7906,\n        \"mime-type\": \"string\",\n        \"url\": \"https://BBNfFGEvWwxsBVfAqoVk.lnqjDmQKw3ebO3VhMjc\"\n      }\n    ]\n  },\n  \"phone\": \"string\",\n  \"website\": \"string\",\n  \"email\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "16f9c720-bc7e-49d7-b09e-61e4c2603dbe",
+              "name": "The organizer post ID is missing or does not exist.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the organizer post name"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1c50c913-f077-44d4-a7be-5a73cd2fa550",
+              "name": "The current user cannot delete the organizer with the specified ID.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the organizer post name"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "afc621ff-a7e7-45bc-abf2-543c3f19b66c",
+              "name": "The organizer with the specified ID has been deleted already.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the organizer post name"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Gone",
+              "code": 410,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "629cec03-b45d-4201-83d5-ba76e46c5c4c",
+              "name": "The organizer with the specified ID could not be deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizers",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the organizer post name"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://unclenearest.com/wp-json/tribe/events/v1/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "021b8135-9cd4-4240-9446-62ab806932fd",
+    "name": "Events Calendar REST Organizers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Events Calendar REST API allows accessing upcoming events information easily and conveniently.",
+      "type": "text/plain"
+    }
+  }
+}

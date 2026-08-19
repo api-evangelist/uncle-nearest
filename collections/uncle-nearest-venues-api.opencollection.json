@@ -1,0 +1,334 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Events Calendar REST Venues API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Venues",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /venues",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/venues",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "The archive page to return"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query",
+                "description": "The number of venues to return on each page"
+              },
+              {
+                "name": "search",
+                "value": "",
+                "type": "query",
+                "description": "Venues should contain the specified string in the title, description or custom fields"
+              },
+              {
+                "name": "event",
+                "value": "",
+                "type": "query",
+                "description": "Venues should be related to this event"
+              },
+              {
+                "name": "has_events",
+                "value": "",
+                "type": "query",
+                "description": "Venues should have events associated to them"
+              },
+              {
+                "name": "only_with_upcoming",
+                "value": "",
+                "type": "query",
+                "description": "Venues should have upcoming events associated to them"
+              },
+              {
+                "name": "status",
+                "value": "",
+                "type": "query",
+                "description": "The organizer post status"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /venues/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/venues/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "the venue post ID"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /venues/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/venues/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "the venue post ID"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "author",
+                  "value": ""
+                },
+                {
+                  "name": "date",
+                  "value": ""
+                },
+                {
+                  "name": "date_utc",
+                  "value": ""
+                },
+                {
+                  "name": "venue",
+                  "value": ""
+                },
+                {
+                  "name": "description",
+                  "value": ""
+                },
+                {
+                  "name": "status",
+                  "value": ""
+                },
+                {
+                  "name": "show_map",
+                  "value": ""
+                },
+                {
+                  "name": "show_map_link",
+                  "value": ""
+                },
+                {
+                  "name": "address",
+                  "value": ""
+                },
+                {
+                  "name": "city",
+                  "value": ""
+                },
+                {
+                  "name": "country",
+                  "value": ""
+                },
+                {
+                  "name": "province",
+                  "value": ""
+                },
+                {
+                  "name": "state",
+                  "value": ""
+                },
+                {
+                  "name": "zip",
+                  "value": ""
+                },
+                {
+                  "name": "phone",
+                  "value": ""
+                },
+                {
+                  "name": "stateprovince",
+                  "value": ""
+                },
+                {
+                  "name": "website",
+                  "value": ""
+                },
+                {
+                  "name": "image",
+                  "value": ""
+                }
+              ]
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /venues/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/venues/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "the venue post ID"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /venues/by-slug/{slug}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/venues/by-slug/:slug",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "the venue post name"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /venues/by-slug/{slug}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/venues/by-slug/:slug",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "the venue post name"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "author",
+                  "value": ""
+                },
+                {
+                  "name": "date",
+                  "value": ""
+                },
+                {
+                  "name": "date_utc",
+                  "value": ""
+                },
+                {
+                  "name": "venue",
+                  "value": ""
+                },
+                {
+                  "name": "description",
+                  "value": ""
+                },
+                {
+                  "name": "status",
+                  "value": ""
+                },
+                {
+                  "name": "show_map",
+                  "value": ""
+                },
+                {
+                  "name": "show_map_link",
+                  "value": ""
+                },
+                {
+                  "name": "address",
+                  "value": ""
+                },
+                {
+                  "name": "city",
+                  "value": ""
+                },
+                {
+                  "name": "country",
+                  "value": ""
+                },
+                {
+                  "name": "province",
+                  "value": ""
+                },
+                {
+                  "name": "state",
+                  "value": ""
+                },
+                {
+                  "name": "zip",
+                  "value": ""
+                },
+                {
+                  "name": "phone",
+                  "value": ""
+                },
+                {
+                  "name": "stateprovince",
+                  "value": ""
+                },
+                {
+                  "name": "website",
+                  "value": ""
+                },
+                {
+                  "name": "image",
+                  "value": ""
+                }
+              ]
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /venues/by-slug/{slug}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://unclenearest.com/wp-json/tribe/events/v1/venues/by-slug/:slug",
+            "params": [
+              {
+                "name": "slug",
+                "value": "",
+                "type": "path",
+                "description": "the venue post name"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,87 @@
+{
+  "item": [
+    {
+      "id": "bc3233a8-f853-4e96-9d93-b8b67a721451",
+      "name": "Doc",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "86756cf5-f65a-4173-9b81-4a93c9255cb8",
+          "name": "/doc",
+          "request": {
+            "name": "/doc",
+            "description": {},
+            "url": {
+              "path": [
+                "doc"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a712a492-f37c-467a-a2bd-f7af110f8f40",
+              "name": "Returns the documentation for The Events Calendar REST API in Swagger consumable format.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "doc"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://unclenearest.com/wp-json/tribe/events/v1/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a553c380-4030-4890-9f90-178bd9093487",
+    "name": "Events Calendar REST Doc API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Events Calendar REST API allows accessing upcoming events information easily and conveniently.",
+      "type": "text/plain"
+    }
+  }
+}

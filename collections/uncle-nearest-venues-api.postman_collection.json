@@ -1,0 +1,3147 @@
+{
+  "item": [
+    {
+      "id": "a6876ee8-7b73-4960-8a6e-7ac2fd286142",
+      "name": "Venues",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e1cec1af-0d26-4790-801f-baf0db20cfef",
+          "name": "/venues",
+          "request": {
+            "name": "/venues",
+            "description": {},
+            "url": {
+              "path": [
+                "venues"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "The archive page to return"
+                },
+                {
+                  "disabled": false,
+                  "key": "per_page",
+                  "value": "<integer>",
+                  "description": "The number of venues to return on each page"
+                },
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>",
+                  "description": "Venues should contain the specified string in the title, description or custom fields"
+                },
+                {
+                  "disabled": false,
+                  "key": "event",
+                  "value": "<integer>",
+                  "description": "Venues should be related to this event"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_events",
+                  "value": "<boolean>",
+                  "description": "Venues should have events associated to them"
+                },
+                {
+                  "disabled": false,
+                  "key": "only_with_upcoming",
+                  "value": "<boolean>",
+                  "description": "Venues should have upcoming events associated to them"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>",
+                  "description": "The organizer post status"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "08f85440-6ff0-4f8c-84a6-3fda6a8fd495",
+              "name": "Returns all the venues matching the search criteria",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "event",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "has_events",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "only_with_upcoming",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "status",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 59,\n    \"global_id\": \"string\",\n    \"global_id_lineage\": [\n      \"string\",\n      \"string\"\n    ],\n    \"author\": 4358,\n    \"date\": \"string\",\n    \"date_utc\": \"string\",\n    \"modified\": \"string\",\n    \"modified_utc\": \"string\",\n    \"status\": \"string\",\n    \"url\": \"string\",\n    \"venue\": \"string\",\n    \"description\": \"string\",\n    \"excerpt\": \"string\",\n    \"slug\": \"string\",\n    \"image\": {\n      \"url\": \"https://Zfucef.jxsDnGbS9Bg+c\",\n      \"id\": 397,\n      \"extension\": \"string\",\n      \"width\": 6646,\n      \"height\": 4964,\n      \"sizes\": [\n        {\n          \"width\": 210,\n          \"height\": 8432,\n          \"mime-type\": \"string\",\n          \"url\": \"http://ExMwnHzoxpwWmNZANPEh.tgT2BgkgZ6ISr8tmeMOzr-gBGTg-NPlzdoatWrzUW7q2Uzxevrls0xJn0DlgzdDHdJArvMQgav9SqT\"\n        },\n        {\n          \"width\": 7960,\n          \"height\": 7366,\n          \"mime-type\": \"string\",\n          \"url\": \"http://xuFjZxAqalLfSOdascnZXDraFtpUs.iuqTiic0zzxH.nocWXMevmFw\"\n        }\n      ]\n    },\n    \"show_map\": true,\n    \"show_map_link\": true,\n    \"address\": \"string\",\n    \"city\": \"string\",\n    \"country\": \"string\",\n    \"province\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"phone\": \"string\",\n    \"website\": \"string\",\n    \"stateprovince\": \"string\",\n    \"geo_lat\": 2970.8485966158128,\n    \"geo_lng\": 1586.1602018356734\n  },\n  {\n    \"id\": 6805,\n    \"global_id\": \"string\",\n    \"global_id_lineage\": [\n      \"string\",\n      \"string\"\n    ],\n    \"author\": 2453,\n    \"date\": \"string\",\n    \"date_utc\": \"string\",\n    \"modified\": \"string\",\n    \"modified_utc\": \"string\",\n    \"status\": \"string\",\n    \"url\": \"string\",\n    \"venue\": \"string\",\n    \"description\": \"string\",\n    \"excerpt\": \"string\",\n    \"slug\": \"string\",\n    \"image\": {\n      \"url\": \"https://zgSiNKenNMTFkMOoAm.vyglvp3gsYP0Fs2pytPpj6jFsmC+4tnJG8jhtXhNWiOGYqdy1zi\",\n      \"id\": 8917,\n      \"extension\": \"string\",\n      \"width\": 9962,\n      \"height\": 9350,\n      \"sizes\": [\n        {\n          \"width\": 6153,\n          \"height\": 7680,\n          \"mime-type\": \"string\",\n          \"url\": \"http://hW.ubgxv+xfFIl+XU8P\"\n        },\n        {\n          \"width\": 1436,\n          \"height\": 9473,\n          \"mime-type\": \"string\",\n          \"url\": \"http://MuHkzWTJOpmWmreVuqJwK.uzznBflhRqxVp8Gtzpy9I,M24i4sCHOLrSY.wD\"\n        }\n      ]\n    },\n    \"show_map\": true,\n    \"show_map_link\": true,\n    \"address\": \"string\",\n    \"city\": \"string\",\n    \"country\": \"string\",\n    \"province\": \"string\",\n    \"state\": \"string\",\n    \"zip\": \"string\",\n    \"phone\": \"string\",\n    \"website\": \"string\",\n    \"stateprovince\": \"string\",\n    \"geo_lat\": 3851.430379919467,\n    \"geo_lng\": 7882.429194107953\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7b4babe3-e44a-4371-a33c-9b2a810014b0",
+              "name": "One or more of the specified query variables has a bad format",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "event",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "has_events",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "only_with_upcoming",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "status",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "84305b39-0a26-41db-8092-ce45e0823fc0",
+              "name": "The requested page was not found.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "event",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "has_events",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "only_with_upcoming",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "status",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7426ba92-a5bc-4c11-aece-d4283647205a",
+          "name": "/venues/:id",
+          "request": {
+            "name": "/venues/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "venues",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) the venue post ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "37851515-c038-4fb1-8891-7a8c22f9ab5a",
+              "name": "Returns the data of the venue with the specified post ID",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the venue post ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 5688,\n  \"global_id\": \"string\",\n  \"global_id_lineage\": [\n    \"string\",\n    \"string\"\n  ],\n  \"author\": 1970,\n  \"date\": \"string\",\n  \"date_utc\": \"string\",\n  \"modified\": \"string\",\n  \"modified_utc\": \"string\",\n  \"status\": \"string\",\n  \"url\": \"string\",\n  \"venue\": \"string\",\n  \"description\": \"string\",\n  \"excerpt\": \"string\",\n  \"slug\": \"string\",\n  \"image\": {\n    \"url\": \"http://nR.kekUsRUVpfGx3nzSFPCcNx2,1o1XRbm1yil9fEK22fQpGnl4noFjNgGMnGiIlJ-cvEp.BqrTFD80\",\n    \"id\": 4742,\n    \"extension\": \"string\",\n    \"width\": 5314,\n    \"height\": 5677,\n    \"sizes\": [\n      {\n        \"width\": 9155,\n        \"height\": 8994,\n        \"mime-type\": \"string\",\n        \"url\": \"http://MKqVuhyJnPwiPwKXfxiQ.lkajCWDK0vj8SX0v7Uj1pIue6otRqVnpHKD9992HjAK,PPXbO7tJUU+\"\n      },\n      {\n        \"width\": 5531,\n        \"height\": 9316,\n        \"mime-type\": \"string\",\n        \"url\": \"https://XlhOTBIawBzxqwpLQAlPvNAwTVZJSGkWO.cotldfMw4ogtsJoDsYMcDxdfDd6tpgcBYvmvyvBHBzBlwZjqUPF7aMIz9QllQ,0\"\n      }\n    ]\n  },\n  \"show_map\": true,\n  \"show_map_link\": true,\n  \"address\": \"string\",\n  \"city\": \"string\",\n  \"country\": \"string\",\n  \"province\": \"string\",\n  \"state\": \"string\",\n  \"zip\": \"string\",\n  \"phone\": \"string\",\n  \"website\": \"string\",\n  \"stateprovince\": \"string\",\n  \"geo_lat\": 832.5286220611162,\n  \"geo_lng\": 3252.8079091643326\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "973defe2-2331-4e6c-b700-9d3552ff88d5",
+              "name": "The venue post ID is missing.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the venue post ID"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a430b1dc-fccc-453a-b8dc-45ab2ace7bba",
+              "name": "The venue with the specified ID is not accessible.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the venue post ID"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "861cb68e-0186-4a7d-8dd6-36c4804e5506",
+              "name": "A venue with the specified post ID does not exist.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the venue post ID"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1430bb0c-b48e-4493-9905-30949922f0e6",
+          "name": "/venues/:id",
+          "request": {
+            "name": "/venues/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "venues",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) the venue post ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "author",
+                  "value": "<integer>",
+                  "description": "The venue author ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<string>",
+                  "description": "The venue publication date"
+                },
+                {
+                  "disabled": false,
+                  "key": "date_utc",
+                  "value": "<string>",
+                  "description": "The venue publication date (UTC time zone)"
+                },
+                {
+                  "disabled": false,
+                  "key": "venue",
+                  "value": "<string>",
+                  "description": "The venue name"
+                },
+                {
+                  "disabled": false,
+                  "key": "description",
+                  "value": "<string>",
+                  "description": "The venue description"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>",
+                  "description": "The venue post status"
+                },
+                {
+                  "disabled": false,
+                  "key": "show_map",
+                  "value": "<string>",
+                  "description": "Whether events linked to the venue should show a map or not"
+                },
+                {
+                  "disabled": false,
+                  "key": "show_map_link",
+                  "value": "<string>",
+                  "description": "Whether events linked to the venue should show a map link or not"
+                },
+                {
+                  "disabled": false,
+                  "key": "address",
+                  "value": "<string>",
+                  "description": "The venue address"
+                },
+                {
+                  "disabled": false,
+                  "key": "city",
+                  "value": "<string>",
+                  "description": "The venue city"
+                },
+                {
+                  "disabled": false,
+                  "key": "country",
+                  "value": "<string>",
+                  "description": "The venue country"
+                },
+                {
+                  "disabled": false,
+                  "key": "province",
+                  "value": "<string>",
+                  "description": "The venue province"
+                },
+                {
+                  "disabled": false,
+                  "key": "state",
+                  "value": "<string>",
+                  "description": "The venue state"
+                },
+                {
+                  "disabled": false,
+                  "key": "zip",
+                  "value": "<string>",
+                  "description": "The venue ZIP code"
+                },
+                {
+                  "disabled": false,
+                  "key": "phone",
+                  "value": "<string>",
+                  "description": "The venue phone number"
+                },
+                {
+                  "disabled": false,
+                  "key": "stateprovince",
+                  "value": "<string>",
+                  "description": "The venue state and province"
+                },
+                {
+                  "disabled": false,
+                  "key": "website",
+                  "value": "<string>",
+                  "description": "The venue website URL"
+                },
+                {
+                  "disabled": false,
+                  "key": "image",
+                  "value": "<string>",
+                  "description": "The organizer featured image ID or URL"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "442969b2-c72d-4eb0-907b-2f25ceee9523",
+              "name": "Returns the data of the updated venue",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the venue post ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue author ID",
+                        "type": "text/plain"
+                      },
+                      "key": "author",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date",
+                        "type": "text/plain"
+                      },
+                      "key": "date",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date (UTC time zone)",
+                        "type": "text/plain"
+                      },
+                      "key": "date_utc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue name",
+                        "type": "text/plain"
+                      },
+                      "key": "venue",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue description",
+                        "type": "text/plain"
+                      },
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue post status",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map link or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map_link",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue address",
+                        "type": "text/plain"
+                      },
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue city",
+                        "type": "text/plain"
+                      },
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue country",
+                        "type": "text/plain"
+                      },
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue province",
+                        "type": "text/plain"
+                      },
+                      "key": "province",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state",
+                        "type": "text/plain"
+                      },
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue ZIP code",
+                        "type": "text/plain"
+                      },
+                      "key": "zip",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue phone number",
+                        "type": "text/plain"
+                      },
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state and province",
+                        "type": "text/plain"
+                      },
+                      "key": "stateprovince",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue website URL",
+                        "type": "text/plain"
+                      },
+                      "key": "website",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer featured image ID or URL",
+                        "type": "text/plain"
+                      },
+                      "key": "image",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 5688,\n  \"global_id\": \"string\",\n  \"global_id_lineage\": [\n    \"string\",\n    \"string\"\n  ],\n  \"author\": 1970,\n  \"date\": \"string\",\n  \"date_utc\": \"string\",\n  \"modified\": \"string\",\n  \"modified_utc\": \"string\",\n  \"status\": \"string\",\n  \"url\": \"string\",\n  \"venue\": \"string\",\n  \"description\": \"string\",\n  \"excerpt\": \"string\",\n  \"slug\": \"string\",\n  \"image\": {\n    \"url\": \"http://nR.kekUsRUVpfGx3nzSFPCcNx2,1o1XRbm1yil9fEK22fQpGnl4noFjNgGMnGiIlJ-cvEp.BqrTFD80\",\n    \"id\": 4742,\n    \"extension\": \"string\",\n    \"width\": 5314,\n    \"height\": 5677,\n    \"sizes\": [\n      {\n        \"width\": 9155,\n        \"height\": 8994,\n        \"mime-type\": \"string\",\n        \"url\": \"http://MKqVuhyJnPwiPwKXfxiQ.lkajCWDK0vj8SX0v7Uj1pIue6otRqVnpHKD9992HjAK,PPXbO7tJUU+\"\n      },\n      {\n        \"width\": 5531,\n        \"height\": 9316,\n        \"mime-type\": \"string\",\n        \"url\": \"https://XlhOTBIawBzxqwpLQAlPvNAwTVZJSGkWO.cotldfMw4ogtsJoDsYMcDxdfDd6tpgcBYvmvyvBHBzBlwZjqUPF7aMIz9QllQ,0\"\n      }\n    ]\n  },\n  \"show_map\": true,\n  \"show_map_link\": true,\n  \"address\": \"string\",\n  \"city\": \"string\",\n  \"country\": \"string\",\n  \"province\": \"string\",\n  \"state\": \"string\",\n  \"zip\": \"string\",\n  \"phone\": \"string\",\n  \"website\": \"string\",\n  \"stateprovince\": \"string\",\n  \"geo_lat\": 832.5286220611162,\n  \"geo_lng\": 3252.8079091643326\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "32dd3870-a2b5-49bb-8712-4416259278f1",
+              "name": "Returns the data of the created venue",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the venue post ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue author ID",
+                        "type": "text/plain"
+                      },
+                      "key": "author",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date",
+                        "type": "text/plain"
+                      },
+                      "key": "date",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date (UTC time zone)",
+                        "type": "text/plain"
+                      },
+                      "key": "date_utc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue name",
+                        "type": "text/plain"
+                      },
+                      "key": "venue",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue description",
+                        "type": "text/plain"
+                      },
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue post status",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map link or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map_link",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue address",
+                        "type": "text/plain"
+                      },
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue city",
+                        "type": "text/plain"
+                      },
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue country",
+                        "type": "text/plain"
+                      },
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue province",
+                        "type": "text/plain"
+                      },
+                      "key": "province",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state",
+                        "type": "text/plain"
+                      },
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue ZIP code",
+                        "type": "text/plain"
+                      },
+                      "key": "zip",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue phone number",
+                        "type": "text/plain"
+                      },
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state and province",
+                        "type": "text/plain"
+                      },
+                      "key": "stateprovince",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue website URL",
+                        "type": "text/plain"
+                      },
+                      "key": "website",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer featured image ID or URL",
+                        "type": "text/plain"
+                      },
+                      "key": "image",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 5688,\n  \"global_id\": \"string\",\n  \"global_id_lineage\": [\n    \"string\",\n    \"string\"\n  ],\n  \"author\": 1970,\n  \"date\": \"string\",\n  \"date_utc\": \"string\",\n  \"modified\": \"string\",\n  \"modified_utc\": \"string\",\n  \"status\": \"string\",\n  \"url\": \"string\",\n  \"venue\": \"string\",\n  \"description\": \"string\",\n  \"excerpt\": \"string\",\n  \"slug\": \"string\",\n  \"image\": {\n    \"url\": \"http://nR.kekUsRUVpfGx3nzSFPCcNx2,1o1XRbm1yil9fEK22fQpGnl4noFjNgGMnGiIlJ-cvEp.BqrTFD80\",\n    \"id\": 4742,\n    \"extension\": \"string\",\n    \"width\": 5314,\n    \"height\": 5677,\n    \"sizes\": [\n      {\n        \"width\": 9155,\n        \"height\": 8994,\n        \"mime-type\": \"string\",\n        \"url\": \"http://MKqVuhyJnPwiPwKXfxiQ.lkajCWDK0vj8SX0v7Uj1pIue6otRqVnpHKD9992HjAK,PPXbO7tJUU+\"\n      },\n      {\n        \"width\": 5531,\n        \"height\": 9316,\n        \"mime-type\": \"string\",\n        \"url\": \"https://XlhOTBIawBzxqwpLQAlPvNAwTVZJSGkWO.cotldfMw4ogtsJoDsYMcDxdfDd6tpgcBYvmvyvBHBzBlwZjqUPF7aMIz9QllQ,0\"\n      }\n    ]\n  },\n  \"show_map\": true,\n  \"show_map_link\": true,\n  \"address\": \"string\",\n  \"city\": \"string\",\n  \"country\": \"string\",\n  \"province\": \"string\",\n  \"state\": \"string\",\n  \"zip\": \"string\",\n  \"phone\": \"string\",\n  \"website\": \"string\",\n  \"stateprovince\": \"string\",\n  \"geo_lat\": 832.5286220611162,\n  \"geo_lng\": 3252.8079091643326\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5f9c4cb0-716b-4728-b47f-5e97c8621bee",
+              "name": "A required parameter is missing or an input parameter is in the wrong format",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the venue post ID"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue author ID",
+                        "type": "text/plain"
+                      },
+                      "key": "author",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date",
+                        "type": "text/plain"
+                      },
+                      "key": "date",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date (UTC time zone)",
+                        "type": "text/plain"
+                      },
+                      "key": "date_utc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue name",
+                        "type": "text/plain"
+                      },
+                      "key": "venue",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue description",
+                        "type": "text/plain"
+                      },
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue post status",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map link or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map_link",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue address",
+                        "type": "text/plain"
+                      },
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue city",
+                        "type": "text/plain"
+                      },
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue country",
+                        "type": "text/plain"
+                      },
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue province",
+                        "type": "text/plain"
+                      },
+                      "key": "province",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state",
+                        "type": "text/plain"
+                      },
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue ZIP code",
+                        "type": "text/plain"
+                      },
+                      "key": "zip",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue phone number",
+                        "type": "text/plain"
+                      },
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state and province",
+                        "type": "text/plain"
+                      },
+                      "key": "stateprovince",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue website URL",
+                        "type": "text/plain"
+                      },
+                      "key": "website",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer featured image ID or URL",
+                        "type": "text/plain"
+                      },
+                      "key": "image",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "00f34c32-78c4-4f10-b9f7-35ed151a9364",
+              "name": "The user is not authorized to create venues",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the venue post ID"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue author ID",
+                        "type": "text/plain"
+                      },
+                      "key": "author",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date",
+                        "type": "text/plain"
+                      },
+                      "key": "date",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date (UTC time zone)",
+                        "type": "text/plain"
+                      },
+                      "key": "date_utc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue name",
+                        "type": "text/plain"
+                      },
+                      "key": "venue",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue description",
+                        "type": "text/plain"
+                      },
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue post status",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map link or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map_link",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue address",
+                        "type": "text/plain"
+                      },
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue city",
+                        "type": "text/plain"
+                      },
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue country",
+                        "type": "text/plain"
+                      },
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue province",
+                        "type": "text/plain"
+                      },
+                      "key": "province",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state",
+                        "type": "text/plain"
+                      },
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue ZIP code",
+                        "type": "text/plain"
+                      },
+                      "key": "zip",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue phone number",
+                        "type": "text/plain"
+                      },
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state and province",
+                        "type": "text/plain"
+                      },
+                      "key": "stateprovince",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue website URL",
+                        "type": "text/plain"
+                      },
+                      "key": "website",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer featured image ID or URL",
+                        "type": "text/plain"
+                      },
+                      "key": "image",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fd90317f-4a48-47fb-a56f-ea592e2b392a",
+          "name": "/venues/:id",
+          "request": {
+            "name": "/venues/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "venues",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) the venue post ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a35e580b-4a48-49e8-a43a-519a0fb3b959",
+              "name": "Deletes a venue and returns its data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the venue post ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 5688,\n  \"global_id\": \"string\",\n  \"global_id_lineage\": [\n    \"string\",\n    \"string\"\n  ],\n  \"author\": 1970,\n  \"date\": \"string\",\n  \"date_utc\": \"string\",\n  \"modified\": \"string\",\n  \"modified_utc\": \"string\",\n  \"status\": \"string\",\n  \"url\": \"string\",\n  \"venue\": \"string\",\n  \"description\": \"string\",\n  \"excerpt\": \"string\",\n  \"slug\": \"string\",\n  \"image\": {\n    \"url\": \"http://nR.kekUsRUVpfGx3nzSFPCcNx2,1o1XRbm1yil9fEK22fQpGnl4noFjNgGMnGiIlJ-cvEp.BqrTFD80\",\n    \"id\": 4742,\n    \"extension\": \"string\",\n    \"width\": 5314,\n    \"height\": 5677,\n    \"sizes\": [\n      {\n        \"width\": 9155,\n        \"height\": 8994,\n        \"mime-type\": \"string\",\n        \"url\": \"http://MKqVuhyJnPwiPwKXfxiQ.lkajCWDK0vj8SX0v7Uj1pIue6otRqVnpHKD9992HjAK,PPXbO7tJUU+\"\n      },\n      {\n        \"width\": 5531,\n        \"height\": 9316,\n        \"mime-type\": \"string\",\n        \"url\": \"https://XlhOTBIawBzxqwpLQAlPvNAwTVZJSGkWO.cotldfMw4ogtsJoDsYMcDxdfDd6tpgcBYvmvyvBHBzBlwZjqUPF7aMIz9QllQ,0\"\n      }\n    ]\n  },\n  \"show_map\": true,\n  \"show_map_link\": true,\n  \"address\": \"string\",\n  \"city\": \"string\",\n  \"country\": \"string\",\n  \"province\": \"string\",\n  \"state\": \"string\",\n  \"zip\": \"string\",\n  \"phone\": \"string\",\n  \"website\": \"string\",\n  \"stateprovince\": \"string\",\n  \"geo_lat\": 832.5286220611162,\n  \"geo_lng\": 3252.8079091643326\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "cc76157d-961e-4ee2-986e-f61c97f2c3bc",
+              "name": "The venue post ID is missing or does not exist.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the venue post ID"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a0d950f3-3848-4132-8ea1-d294d975f495",
+              "name": "The current user cannot delete the venue with the specified ID.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the venue post ID"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ec9d73ec-390f-487a-84f3-dc0d60ae1285",
+              "name": "The venue with the specified ID has been deleted already.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the venue post ID"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Gone",
+              "code": 410,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0639748b-47b0-4aa2-b776-0319cdfc4deb",
+              "name": "The venue with the specified ID could not be deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) the venue post ID"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "84eeb7ce-1e18-48dc-b78b-23ab21e0c37a",
+          "name": "/venues/by-slug/:slug",
+          "request": {
+            "name": "/venues/by-slug/:slug",
+            "description": {},
+            "url": {
+              "path": [
+                "venues",
+                "by-slug",
+                ":slug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) the venue post name"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a79a532c-ae9b-442e-bf33-1214d1376bf3",
+              "name": "Returns the data of the venue with the specified post ID",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the venue post name"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 5688,\n  \"global_id\": \"string\",\n  \"global_id_lineage\": [\n    \"string\",\n    \"string\"\n  ],\n  \"author\": 1970,\n  \"date\": \"string\",\n  \"date_utc\": \"string\",\n  \"modified\": \"string\",\n  \"modified_utc\": \"string\",\n  \"status\": \"string\",\n  \"url\": \"string\",\n  \"venue\": \"string\",\n  \"description\": \"string\",\n  \"excerpt\": \"string\",\n  \"slug\": \"string\",\n  \"image\": {\n    \"url\": \"http://nR.kekUsRUVpfGx3nzSFPCcNx2,1o1XRbm1yil9fEK22fQpGnl4noFjNgGMnGiIlJ-cvEp.BqrTFD80\",\n    \"id\": 4742,\n    \"extension\": \"string\",\n    \"width\": 5314,\n    \"height\": 5677,\n    \"sizes\": [\n      {\n        \"width\": 9155,\n        \"height\": 8994,\n        \"mime-type\": \"string\",\n        \"url\": \"http://MKqVuhyJnPwiPwKXfxiQ.lkajCWDK0vj8SX0v7Uj1pIue6otRqVnpHKD9992HjAK,PPXbO7tJUU+\"\n      },\n      {\n        \"width\": 5531,\n        \"height\": 9316,\n        \"mime-type\": \"string\",\n        \"url\": \"https://XlhOTBIawBzxqwpLQAlPvNAwTVZJSGkWO.cotldfMw4ogtsJoDsYMcDxdfDd6tpgcBYvmvyvBHBzBlwZjqUPF7aMIz9QllQ,0\"\n      }\n    ]\n  },\n  \"show_map\": true,\n  \"show_map_link\": true,\n  \"address\": \"string\",\n  \"city\": \"string\",\n  \"country\": \"string\",\n  \"province\": \"string\",\n  \"state\": \"string\",\n  \"zip\": \"string\",\n  \"phone\": \"string\",\n  \"website\": \"string\",\n  \"stateprovince\": \"string\",\n  \"geo_lat\": 832.5286220611162,\n  \"geo_lng\": 3252.8079091643326\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ad06193e-4560-4931-bfcb-4c08b16a93f8",
+              "name": "The venue post ID is missing.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the venue post name"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c00957e3-4dfc-4552-b801-c6763e82ecce",
+              "name": "The venue with the specified ID is not accessible.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the venue post name"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "66fd63ba-90be-4619-ad53-d141644cafc2",
+              "name": "A venue with the specified post ID does not exist.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the venue post name"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f8d726c6-0b65-4288-adae-63d246e9284d",
+          "name": "/venues/by-slug/:slug",
+          "request": {
+            "name": "/venues/by-slug/:slug",
+            "description": {},
+            "url": {
+              "path": [
+                "venues",
+                "by-slug",
+                ":slug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) the venue post name"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "author",
+                  "value": "<integer>",
+                  "description": "The venue author ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<string>",
+                  "description": "The venue publication date"
+                },
+                {
+                  "disabled": false,
+                  "key": "date_utc",
+                  "value": "<string>",
+                  "description": "The venue publication date (UTC time zone)"
+                },
+                {
+                  "disabled": false,
+                  "key": "venue",
+                  "value": "<string>",
+                  "description": "The venue name"
+                },
+                {
+                  "disabled": false,
+                  "key": "description",
+                  "value": "<string>",
+                  "description": "The venue description"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>",
+                  "description": "The venue post status"
+                },
+                {
+                  "disabled": false,
+                  "key": "show_map",
+                  "value": "<string>",
+                  "description": "Whether events linked to the venue should show a map or not"
+                },
+                {
+                  "disabled": false,
+                  "key": "show_map_link",
+                  "value": "<string>",
+                  "description": "Whether events linked to the venue should show a map link or not"
+                },
+                {
+                  "disabled": false,
+                  "key": "address",
+                  "value": "<string>",
+                  "description": "The venue address"
+                },
+                {
+                  "disabled": false,
+                  "key": "city",
+                  "value": "<string>",
+                  "description": "The venue city"
+                },
+                {
+                  "disabled": false,
+                  "key": "country",
+                  "value": "<string>",
+                  "description": "The venue country"
+                },
+                {
+                  "disabled": false,
+                  "key": "province",
+                  "value": "<string>",
+                  "description": "The venue province"
+                },
+                {
+                  "disabled": false,
+                  "key": "state",
+                  "value": "<string>",
+                  "description": "The venue state"
+                },
+                {
+                  "disabled": false,
+                  "key": "zip",
+                  "value": "<string>",
+                  "description": "The venue ZIP code"
+                },
+                {
+                  "disabled": false,
+                  "key": "phone",
+                  "value": "<string>",
+                  "description": "The venue phone number"
+                },
+                {
+                  "disabled": false,
+                  "key": "stateprovince",
+                  "value": "<string>",
+                  "description": "The venue state and province"
+                },
+                {
+                  "disabled": false,
+                  "key": "website",
+                  "value": "<string>",
+                  "description": "The venue website URL"
+                },
+                {
+                  "disabled": false,
+                  "key": "image",
+                  "value": "<string>",
+                  "description": "The organizer featured image ID or URL"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "8e414d84-e057-40a5-acfe-8bd9f954bc8b",
+              "name": "Returns the data of the updated venue",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the venue post name"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue author ID",
+                        "type": "text/plain"
+                      },
+                      "key": "author",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date",
+                        "type": "text/plain"
+                      },
+                      "key": "date",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date (UTC time zone)",
+                        "type": "text/plain"
+                      },
+                      "key": "date_utc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue name",
+                        "type": "text/plain"
+                      },
+                      "key": "venue",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue description",
+                        "type": "text/plain"
+                      },
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue post status",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map link or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map_link",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue address",
+                        "type": "text/plain"
+                      },
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue city",
+                        "type": "text/plain"
+                      },
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue country",
+                        "type": "text/plain"
+                      },
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue province",
+                        "type": "text/plain"
+                      },
+                      "key": "province",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state",
+                        "type": "text/plain"
+                      },
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue ZIP code",
+                        "type": "text/plain"
+                      },
+                      "key": "zip",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue phone number",
+                        "type": "text/plain"
+                      },
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state and province",
+                        "type": "text/plain"
+                      },
+                      "key": "stateprovince",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue website URL",
+                        "type": "text/plain"
+                      },
+                      "key": "website",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer featured image ID or URL",
+                        "type": "text/plain"
+                      },
+                      "key": "image",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 5688,\n  \"global_id\": \"string\",\n  \"global_id_lineage\": [\n    \"string\",\n    \"string\"\n  ],\n  \"author\": 1970,\n  \"date\": \"string\",\n  \"date_utc\": \"string\",\n  \"modified\": \"string\",\n  \"modified_utc\": \"string\",\n  \"status\": \"string\",\n  \"url\": \"string\",\n  \"venue\": \"string\",\n  \"description\": \"string\",\n  \"excerpt\": \"string\",\n  \"slug\": \"string\",\n  \"image\": {\n    \"url\": \"http://nR.kekUsRUVpfGx3nzSFPCcNx2,1o1XRbm1yil9fEK22fQpGnl4noFjNgGMnGiIlJ-cvEp.BqrTFD80\",\n    \"id\": 4742,\n    \"extension\": \"string\",\n    \"width\": 5314,\n    \"height\": 5677,\n    \"sizes\": [\n      {\n        \"width\": 9155,\n        \"height\": 8994,\n        \"mime-type\": \"string\",\n        \"url\": \"http://MKqVuhyJnPwiPwKXfxiQ.lkajCWDK0vj8SX0v7Uj1pIue6otRqVnpHKD9992HjAK,PPXbO7tJUU+\"\n      },\n      {\n        \"width\": 5531,\n        \"height\": 9316,\n        \"mime-type\": \"string\",\n        \"url\": \"https://XlhOTBIawBzxqwpLQAlPvNAwTVZJSGkWO.cotldfMw4ogtsJoDsYMcDxdfDd6tpgcBYvmvyvBHBzBlwZjqUPF7aMIz9QllQ,0\"\n      }\n    ]\n  },\n  \"show_map\": true,\n  \"show_map_link\": true,\n  \"address\": \"string\",\n  \"city\": \"string\",\n  \"country\": \"string\",\n  \"province\": \"string\",\n  \"state\": \"string\",\n  \"zip\": \"string\",\n  \"phone\": \"string\",\n  \"website\": \"string\",\n  \"stateprovince\": \"string\",\n  \"geo_lat\": 832.5286220611162,\n  \"geo_lng\": 3252.8079091643326\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "572a9a2b-e004-4e4b-9251-92a97195d2bc",
+              "name": "Returns the data of the created venue",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the venue post name"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue author ID",
+                        "type": "text/plain"
+                      },
+                      "key": "author",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date",
+                        "type": "text/plain"
+                      },
+                      "key": "date",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date (UTC time zone)",
+                        "type": "text/plain"
+                      },
+                      "key": "date_utc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue name",
+                        "type": "text/plain"
+                      },
+                      "key": "venue",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue description",
+                        "type": "text/plain"
+                      },
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue post status",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map link or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map_link",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue address",
+                        "type": "text/plain"
+                      },
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue city",
+                        "type": "text/plain"
+                      },
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue country",
+                        "type": "text/plain"
+                      },
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue province",
+                        "type": "text/plain"
+                      },
+                      "key": "province",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state",
+                        "type": "text/plain"
+                      },
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue ZIP code",
+                        "type": "text/plain"
+                      },
+                      "key": "zip",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue phone number",
+                        "type": "text/plain"
+                      },
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state and province",
+                        "type": "text/plain"
+                      },
+                      "key": "stateprovince",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue website URL",
+                        "type": "text/plain"
+                      },
+                      "key": "website",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer featured image ID or URL",
+                        "type": "text/plain"
+                      },
+                      "key": "image",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 5688,\n  \"global_id\": \"string\",\n  \"global_id_lineage\": [\n    \"string\",\n    \"string\"\n  ],\n  \"author\": 1970,\n  \"date\": \"string\",\n  \"date_utc\": \"string\",\n  \"modified\": \"string\",\n  \"modified_utc\": \"string\",\n  \"status\": \"string\",\n  \"url\": \"string\",\n  \"venue\": \"string\",\n  \"description\": \"string\",\n  \"excerpt\": \"string\",\n  \"slug\": \"string\",\n  \"image\": {\n    \"url\": \"http://nR.kekUsRUVpfGx3nzSFPCcNx2,1o1XRbm1yil9fEK22fQpGnl4noFjNgGMnGiIlJ-cvEp.BqrTFD80\",\n    \"id\": 4742,\n    \"extension\": \"string\",\n    \"width\": 5314,\n    \"height\": 5677,\n    \"sizes\": [\n      {\n        \"width\": 9155,\n        \"height\": 8994,\n        \"mime-type\": \"string\",\n        \"url\": \"http://MKqVuhyJnPwiPwKXfxiQ.lkajCWDK0vj8SX0v7Uj1pIue6otRqVnpHKD9992HjAK,PPXbO7tJUU+\"\n      },\n      {\n        \"width\": 5531,\n        \"height\": 9316,\n        \"mime-type\": \"string\",\n        \"url\": \"https://XlhOTBIawBzxqwpLQAlPvNAwTVZJSGkWO.cotldfMw4ogtsJoDsYMcDxdfDd6tpgcBYvmvyvBHBzBlwZjqUPF7aMIz9QllQ,0\"\n      }\n    ]\n  },\n  \"show_map\": true,\n  \"show_map_link\": true,\n  \"address\": \"string\",\n  \"city\": \"string\",\n  \"country\": \"string\",\n  \"province\": \"string\",\n  \"state\": \"string\",\n  \"zip\": \"string\",\n  \"phone\": \"string\",\n  \"website\": \"string\",\n  \"stateprovince\": \"string\",\n  \"geo_lat\": 832.5286220611162,\n  \"geo_lng\": 3252.8079091643326\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3037df26-e9ba-493c-a487-63262b98cafb",
+              "name": "A required parameter is missing or an input parameter is in the wrong format",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the venue post name"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue author ID",
+                        "type": "text/plain"
+                      },
+                      "key": "author",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date",
+                        "type": "text/plain"
+                      },
+                      "key": "date",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date (UTC time zone)",
+                        "type": "text/plain"
+                      },
+                      "key": "date_utc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue name",
+                        "type": "text/plain"
+                      },
+                      "key": "venue",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue description",
+                        "type": "text/plain"
+                      },
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue post status",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map link or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map_link",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue address",
+                        "type": "text/plain"
+                      },
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue city",
+                        "type": "text/plain"
+                      },
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue country",
+                        "type": "text/plain"
+                      },
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue province",
+                        "type": "text/plain"
+                      },
+                      "key": "province",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state",
+                        "type": "text/plain"
+                      },
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue ZIP code",
+                        "type": "text/plain"
+                      },
+                      "key": "zip",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue phone number",
+                        "type": "text/plain"
+                      },
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state and province",
+                        "type": "text/plain"
+                      },
+                      "key": "stateprovince",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue website URL",
+                        "type": "text/plain"
+                      },
+                      "key": "website",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer featured image ID or URL",
+                        "type": "text/plain"
+                      },
+                      "key": "image",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5d9d3d4b-b652-4cb1-8873-317513dadcf6",
+              "name": "The user is not authorized to create venues",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the venue post name"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue author ID",
+                        "type": "text/plain"
+                      },
+                      "key": "author",
+                      "value": "<integer>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date",
+                        "type": "text/plain"
+                      },
+                      "key": "date",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue publication date (UTC time zone)",
+                        "type": "text/plain"
+                      },
+                      "key": "date_utc",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue name",
+                        "type": "text/plain"
+                      },
+                      "key": "venue",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue description",
+                        "type": "text/plain"
+                      },
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue post status",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Whether events linked to the venue should show a map link or not",
+                        "type": "text/plain"
+                      },
+                      "key": "show_map_link",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue address",
+                        "type": "text/plain"
+                      },
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue city",
+                        "type": "text/plain"
+                      },
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue country",
+                        "type": "text/plain"
+                      },
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue province",
+                        "type": "text/plain"
+                      },
+                      "key": "province",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state",
+                        "type": "text/plain"
+                      },
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue ZIP code",
+                        "type": "text/plain"
+                      },
+                      "key": "zip",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue phone number",
+                        "type": "text/plain"
+                      },
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue state and province",
+                        "type": "text/plain"
+                      },
+                      "key": "stateprovince",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The venue website URL",
+                        "type": "text/plain"
+                      },
+                      "key": "website",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "The organizer featured image ID or URL",
+                        "type": "text/plain"
+                      },
+                      "key": "image",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0fd49d7d-5144-4e0a-a894-0097231f51db",
+          "name": "/venues/by-slug/:slug",
+          "request": {
+            "name": "/venues/by-slug/:slug",
+            "description": {},
+            "url": {
+              "path": [
+                "venues",
+                "by-slug",
+                ":slug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "slug",
+                  "description": "(Required) the venue post name"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "394790bc-548f-41ea-8f0b-08c931683305",
+              "name": "Deletes a venue and returns its data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the venue post name"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 5688,\n  \"global_id\": \"string\",\n  \"global_id_lineage\": [\n    \"string\",\n    \"string\"\n  ],\n  \"author\": 1970,\n  \"date\": \"string\",\n  \"date_utc\": \"string\",\n  \"modified\": \"string\",\n  \"modified_utc\": \"string\",\n  \"status\": \"string\",\n  \"url\": \"string\",\n  \"venue\": \"string\",\n  \"description\": \"string\",\n  \"excerpt\": \"string\",\n  \"slug\": \"string\",\n  \"image\": {\n    \"url\": \"http://nR.kekUsRUVpfGx3nzSFPCcNx2,1o1XRbm1yil9fEK22fQpGnl4noFjNgGMnGiIlJ-cvEp.BqrTFD80\",\n    \"id\": 4742,\n    \"extension\": \"string\",\n    \"width\": 5314,\n    \"height\": 5677,\n    \"sizes\": [\n      {\n        \"width\": 9155,\n        \"height\": 8994,\n        \"mime-type\": \"string\",\n        \"url\": \"http://MKqVuhyJnPwiPwKXfxiQ.lkajCWDK0vj8SX0v7Uj1pIue6otRqVnpHKD9992HjAK,PPXbO7tJUU+\"\n      },\n      {\n        \"width\": 5531,\n        \"height\": 9316,\n        \"mime-type\": \"string\",\n        \"url\": \"https://XlhOTBIawBzxqwpLQAlPvNAwTVZJSGkWO.cotldfMw4ogtsJoDsYMcDxdfDd6tpgcBYvmvyvBHBzBlwZjqUPF7aMIz9QllQ,0\"\n      }\n    ]\n  },\n  \"show_map\": true,\n  \"show_map_link\": true,\n  \"address\": \"string\",\n  \"city\": \"string\",\n  \"country\": \"string\",\n  \"province\": \"string\",\n  \"state\": \"string\",\n  \"zip\": \"string\",\n  \"phone\": \"string\",\n  \"website\": \"string\",\n  \"stateprovince\": \"string\",\n  \"geo_lat\": 832.5286220611162,\n  \"geo_lng\": 3252.8079091643326\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bf5897e5-0113-42cc-96da-a9063c13aaca",
+              "name": "The venue post ID is missing or does not exist.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the venue post name"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0ef4b936-0713-4347-b9ba-b2a6a01ce681",
+              "name": "The current user cannot delete the venue with the specified ID.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the venue post name"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "08bc5253-1429-4b94-b5e3-1c22751ca495",
+              "name": "The venue with the specified ID has been deleted already.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the venue post name"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Gone",
+              "code": 410,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "270ead3c-65e3-4a02-8c7d-4e3577d0ea4e",
+              "name": "The venue with the specified ID could not be deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "venues",
+                    "by-slug",
+                    ":slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "slug",
+                      "description": "(Required) the venue post name"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://unclenearest.com/wp-json/tribe/events/v1/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "99852b9b-14a3-48e3-be53-15e94f8516f0",
+    "name": "Events Calendar REST Venues API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Events Calendar REST API allows accessing upcoming events information easily and conveniently.",
+      "type": "text/plain"
+    }
+  }
+}

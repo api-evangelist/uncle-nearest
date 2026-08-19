@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Events Calendar REST Common API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Common",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the documentation for the TEC REST API",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://unclenearest.com/wp-json/tec/v1/docs"
+          },
+          "docs": "Returns the documentation for The Events Calendar REST API in Swagger consumable format."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

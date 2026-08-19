@@ -1,0 +1,326 @@
+{
+  "item": [
+    {
+      "id": "42e93f69-5bea-4429-b57b-b88fe92e41bb",
+      "name": "Events Pro",
+      "description": {
+        "content": "These operations are introduced by Events Pro.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "62b00b74-5265-41b1-8413-fcad2d113e55",
+          "name": "Retrieve Series",
+          "request": {
+            "name": "Retrieve Series",
+            "description": {
+              "content": "Returns a list of series",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "series"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1",
+                  "description": "The collection page number."
+                },
+                {
+                  "disabled": false,
+                  "key": "event_post_id",
+                  "value": "<integer>,<integer>",
+                  "description": "Limit result set to series assigned to specific event post IDs."
+                },
+                {
+                  "disabled": false,
+                  "key": "per_page",
+                  "value": "9",
+                  "description": "Maximum number of items to be returned in result set."
+                },
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>",
+                  "description": "Limit results to those matching a string."
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "publish",
+                  "description": "Limit result set to events with specific status."
+                },
+                {
+                  "disabled": false,
+                  "key": "ticketed",
+                  "value": "<boolean>",
+                  "description": "Limit result set to events with tickets."
+                },
+                {
+                  "disabled": false,
+                  "key": "orderby",
+                  "value": "event_date",
+                  "description": "Sort collection by event attribute."
+                },
+                {
+                  "disabled": false,
+                  "key": "order",
+                  "value": "ASC",
+                  "description": "Order sort attribute ascending or descending."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7537cd09-320b-4afc-b1f3-a4c6a6d0001a",
+              "name": "Returns the list of series",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "series"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "event_post_id",
+                      "value": "126"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "51"
+                    },
+                    {
+                      "key": "search",
+                      "value": "Example"
+                    },
+                    {
+                      "key": "status",
+                      "value": "publish"
+                    },
+                    {
+                      "key": "ticketed",
+                      "value": "true"
+                    },
+                    {
+                      "key": "orderby",
+                      "value": "date"
+                    },
+                    {
+                      "key": "order",
+                      "value": "ASC"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "(Required) The total number of series matching the request.",
+                  "key": "X-WP-Total",
+                  "value": "3576"
+                },
+                {
+                  "disabled": false,
+                  "description": "(Required) The total number of pages for the request.",
+                  "key": "X-WP-TotalPages",
+                  "value": "3576"
+                },
+                {
+                  "disabled": false,
+                  "description": "RFC 5988 Link header for pagination. Contains navigation links with relationships:\n\t\t\t\t`rel=\"next\"` for the next page (if not on last page),\n\t\t\t\t`rel=\"prev\"` for the previous page (if not on first page).\n\t\t\t\tHeader is omitted entirely if there's only one page",
+                  "key": "Link",
+                  "value": "https://pmHEutmrPBkZBQpGEECyxUxuA.svovF3,8V9iB-1iw7ehPxx,UDklrNEosGhES+5gy4BCBVRgtan7fo4Vl5x0+O6s6p,http://THXcnXsQIqDAiyRpsQeIZMPcI.siiqwhoXj-H,4Sb4,fa2O9mxZULBujc236e"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"date\": \"2025-06-04T23:36:56+01:00\",\n    \"date_gmt\": \"2025-06-04T22:36:56Z\",\n    \"guid\": {\n      \"rendered\": \"https://example.com/?p=12345\"\n    },\n    \"id\": 12345,\n    \"link\": \"https://example.com/my-awesome-title\",\n    \"modified\": \"2025-06-05T19:06:56-03:30\",\n    \"modified_gmt\": \"2025-06-05T22:36:56Z\",\n    \"slug\": \"my-awesome-title\",\n    \"status\": \"publish\",\n    \"permalink_template\": \"https://example.com/sample/\",\n    \"generated_slug\": \"my-awesome-title\",\n    \"title\": {\n      \"rendered\": \"My Awesome Title\"\n    },\n    \"content\": {\n      \"rendered\": \"This is the content...\",\n      \"protected\": false\n    },\n    \"excerpt\": {\n      \"rendered\": \"This is the excerpt...\",\n      \"protected\": false\n    },\n    \"author\": 1,\n    \"featured_media\": 123,\n    \"comment_status\": \"open\",\n    \"ping_status\": \"open\",\n    \"format\": \"standard\",\n    \"sticky\": false,\n    \"template\": \"templates-full.php\",\n    \"tags\": [\n      2,\n      8,\n      15\n    ]\n  },\n  {\n    \"date\": \"2025-06-04T23:36:56+01:00\",\n    \"date_gmt\": \"2025-06-04T22:36:56Z\",\n    \"guid\": {\n      \"rendered\": \"https://example.com/?p=12345\"\n    },\n    \"id\": 12345,\n    \"link\": \"https://example.com/my-awesome-title\",\n    \"modified\": \"2025-06-05T19:06:56-03:30\",\n    \"modified_gmt\": \"2025-06-05T22:36:56Z\",\n    \"slug\": \"my-awesome-title\",\n    \"status\": \"publish\",\n    \"permalink_template\": \"https://example.com/sample/\",\n    \"generated_slug\": \"my-awesome-title\",\n    \"title\": {\n      \"rendered\": \"My Awesome Title\"\n    },\n    \"content\": {\n      \"rendered\": \"This is the content...\",\n      \"protected\": false\n    },\n    \"excerpt\": {\n      \"rendered\": \"This is the excerpt...\",\n      \"protected\": false\n    },\n    \"author\": 1,\n    \"featured_media\": 123,\n    \"comment_status\": \"open\",\n    \"ping_status\": \"open\",\n    \"format\": \"standard\",\n    \"sticky\": false,\n    \"template\": \"templates-full.php\",\n    \"tags\": [\n      2,\n      8,\n      15\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "72c4cef4-3093-4e0b-bfbb-82c0bdf8bfb6",
+              "name": "A required parameter is missing or an input parameter is in the wrong format",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "series"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "event_post_id",
+                      "value": "126"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "51"
+                    },
+                    {
+                      "key": "search",
+                      "value": "Example"
+                    },
+                    {
+                      "key": "status",
+                      "value": "publish"
+                    },
+                    {
+                      "key": "ticketed",
+                      "value": "true"
+                    },
+                    {
+                      "key": "orderby",
+                      "value": "date"
+                    },
+                    {
+                      "key": "order",
+                      "value": "ASC"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3fdaf1b7-50f3-47bf-ade0-9c07f6e04980",
+              "name": "The requested page was not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "series"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "event_post_id",
+                      "value": "126"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "51"
+                    },
+                    {
+                      "key": "search",
+                      "value": "Example"
+                    },
+                    {
+                      "key": "status",
+                      "value": "publish"
+                    },
+                    {
+                      "key": "ticketed",
+                      "value": "true"
+                    },
+                    {
+                      "key": "orderby",
+                      "value": "date"
+                    },
+                    {
+                      "key": "order",
+                      "value": "ASC"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://unclenearest.com/wp-json/tec/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c90b7c27-0c10-4309-bc3d-702eba7a0721",
+    "name": "Events Calendar REST Events Pro API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Events Calendar REST API allows accessing upcoming events information easily and conveniently.\n\nContact Support:\n Name: The Events Calendar\n Email: support@theeventscalendar.com",
+      "type": "text/plain"
+    }
+  }
+}

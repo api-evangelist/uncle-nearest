@@ -1,0 +1,38 @@
+{
+  "provider": "uncle-nearest",
+  "sources": [
+    "uncle-nearest-categories-api-openapi.yml",
+    "uncle-nearest-common-api-openapi.yml",
+    "uncle-nearest-doc-api-openapi.yml",
+    "uncle-nearest-events-api-openapi.yml",
+    "uncle-nearest-events-pro-api-openapi.yml",
+    "uncle-nearest-organizers-api-openapi.yml",
+    "uncle-nearest-tags-api-openapi.yml",
+    "uncle-nearest-venues-api-openapi.yml"
+  ],
+  "outputs": [
+    "uncle-nearest-categories-api-openapi.yml",
+    "uncle-nearest-common-api-openapi.yml",
+    "uncle-nearest-doc-api-openapi.yml",
+    "uncle-nearest-events-api-openapi.yml",
+    "uncle-nearest-events-pro-api-openapi.yml",
+    "uncle-nearest-organizers-api-openapi.yml",
+    "uncle-nearest-tags-api-openapi.yml",
+    "uncle-nearest-venues-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "uncle-nearest-categories-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "uncle-nearest-common-api-openapi.yml: upgraded openapi 3.0.4 -> OpenAPI 3.2.0",
+    "uncle-nearest-doc-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "uncle-nearest-events-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "uncle-nearest-events-pro-api-openapi.yml: upgraded openapi 3.0.4 -> OpenAPI 3.2.0",
+    "uncle-nearest-organizers-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "uncle-nearest-tags-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "uncle-nearest-venues-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": []
+}
