@@ -20,6 +20,17 @@ created: '2026-08-02'
 modified: '2026-08-02'
 tags:
 - Company
+- Whiskey
+- Spirits
+- Beverage Alcohol
+- Consumer Packaged Goods
+- Distillery
+- Hospitality
+- Event
+- Tennessee
+- WordPress
+tags_raw:
+- Company
 - whiskey
 - spirits
 - beverage-alcohol
@@ -39,6 +50,10 @@ apis:
   humanURL: https://unclenearest.com/
   baseURL: https://unclenearest.com/wp-json/
   tags:
+  - Content
+  - CMS
+  - WordPress
+  tags_raw:
   - content
   - cms
   - wordpress
@@ -103,6 +118,8 @@ apis:
   humanURL: https://unclenearest.com/live/
   baseURL: https://unclenearest.com/wp-json/tribe/events/v1/
   tags:
+  - Event
+  tags_raw:
   - Events
   properties:
   - type: OpenAPI
