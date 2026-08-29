@@ -9,6 +9,18 @@ description: >-
   consumer-facing brand with no developer program and no product API; its only public machine-readable surfaces are the
   WordPress REST API and the two OpenAPI-documented Events Calendar REST APIs served from its own web host at
   unclenearest.com, which expose the brand's published events, venues and organizers as read-only JSON.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://unclenearest.com/wp-content/themes/unclenearest/lib/img/un-logo-2022.svg
 url: https://raw.githubusercontent.com/api-evangelist/uncle-nearest/refs/heads/main/apis.yml
 x-type: company
