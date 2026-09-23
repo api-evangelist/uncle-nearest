@@ -69,6 +69,10 @@ paths:
           description: The requested page was not found.
       tags:
       - Venues
+      summary: Get venues
+      x-summary-source: derived
+      operationId: getVenues
+      x-operation-id-source: derived
   /venues/{id}:
     get:
       parameters:
@@ -93,6 +97,10 @@ paths:
           description: A venue with the specified post ID does not exist.
       tags:
       - Venues
+      summary: Get venues by id
+      x-summary-source: derived
+      operationId: getVenuesById
+      x-operation-id-source: derived
     post:
       parameters:
       - in: path
@@ -180,6 +188,10 @@ paths:
           description: The user is not authorized to create venues
       tags:
       - Venues
+      summary: Create venues by id
+      x-summary-source: derived
+      operationId: postVenuesById
+      x-operation-id-source: derived
     delete:
       parameters:
       - in: path
@@ -205,6 +217,10 @@ paths:
           description: The venue with the specified ID could not be deleted.
       tags:
       - Venues
+      summary: Delete venues by id
+      x-summary-source: derived
+      operationId: deleteVenuesById
+      x-operation-id-source: derived
   /venues/by-slug/{slug}:
     get:
       parameters:
@@ -229,6 +245,10 @@ paths:
           description: A venue with the specified post ID does not exist.
       tags:
       - Venues
+      summary: Get venues by slug by slug
+      x-summary-source: derived
+      operationId: getVenuesBySlugBySlug
+      x-operation-id-source: derived
     post:
       parameters:
       - in: path
@@ -316,6 +336,10 @@ paths:
           description: The user is not authorized to create venues
       tags:
       - Venues
+      summary: Create venues by slug by slug
+      x-summary-source: derived
+      operationId: postVenuesBySlugBySlug
+      x-operation-id-source: derived
     delete:
       parameters:
       - in: path
@@ -341,24 +365,12 @@ paths:
           description: The venue with the specified ID could not be deleted.
       tags:
       - Venues
+      summary: Delete venues by slug by slug
+      x-summary-source: derived
+      operationId: deleteVenuesBySlugBySlug
+      x-operation-id-source: derived
 components:
   schemas:
-    ImageSize:
-      type: object
-      properties:
-        width:
-          type: integer
-          description: The image width in pixels in the specified size
-        height:
-          type: integer
-          description: The image height in pixels in the specified size
-        mime-type:
-          type: string
-          description: The image mime-type
-        url:
-          type: string
-          format: uri
-          description: The link to the image in the specified size on the site
     Image:
       type: object
       properties:
@@ -383,6 +395,22 @@ components:
           description: The details about each size available for the image
           items:
             $ref: '#/components/schemas/ImageSize'
+    ImageSize:
+      type: object
+      properties:
+        width:
+          type: integer
+          description: The image width in pixels in the specified size
+        height:
+          type: integer
+          description: The image height in pixels in the specified size
+        mime-type:
+          type: string
+          description: The image mime-type
+        url:
+          type: string
+          format: uri
+          description: The link to the image in the specified size on the site
     Venue:
       type: object
       properties:

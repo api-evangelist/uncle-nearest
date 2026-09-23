@@ -10,8 +10,6 @@ tags:
 - name: Events
 paths:
   /events:
-    servers:
-    - url: https://unclenearest.com/wp-json/tribe/events/v1/
     get:
       parameters:
       - in: query
@@ -177,6 +175,10 @@ paths:
           description: The requested page was not found.
       tags:
       - Events
+      summary: Get events
+      x-summary-source: derived
+      operationId: getEvents
+      x-operation-id-source: derived
     post:
       summary: Create an Event
       security:
@@ -248,9 +250,9 @@ paths:
           description: You do not have permission to create events
         '500':
           description: Failed to create the event
-  /events/{id}:
     servers:
     - url: https://unclenearest.com/wp-json/tribe/events/v1/
+  /events/{id}:
     get:
       parameters:
       - in: path
@@ -280,6 +282,10 @@ paths:
           description: An event with the specified ID does not exist.
       tags:
       - Events
+      summary: Get events by id
+      x-summary-source: derived
+      operationId: getEventsById
+      x-operation-id-source: derived
     post:
       parameters:
       - in: path
@@ -399,6 +405,10 @@ paths:
           description: The user is not authorized to create events
       tags:
       - Events
+      summary: Create events by id
+      x-summary-source: derived
+      operationId: postEventsById
+      x-operation-id-source: derived
     delete:
       parameters:
       - in: path
@@ -430,6 +440,10 @@ paths:
           description: The event with the specified ID could not be deleted.
       tags:
       - Events
+      summary: Delete events by id
+      x-summary-source: derived
+      operationId: deleteEventsById
+      x-operation-id-source: derived
     put:
       summary: Update an Event
       security:
@@ -510,9 +524,9 @@ paths:
           description: The requested event was not found
         '500':
           description: Failed to update the event
-  /events/by-slug/{slug}:
     servers:
     - url: https://unclenearest.com/wp-json/tribe/events/v1/
+  /events/by-slug/{slug}:
     get:
       parameters:
       - in: path
@@ -536,6 +550,10 @@ paths:
           description: An event with the specified ID does not exist.
       tags:
       - Events
+      summary: Get events by slug by slug
+      x-summary-source: derived
+      operationId: getEventsBySlugBySlug
+      x-operation-id-source: derived
     post:
       parameters:
       - in: path
@@ -649,6 +667,10 @@ paths:
           description: The user is not authorized to create events
       tags:
       - Events
+      summary: Create events by slug by slug
+      x-summary-source: derived
+      operationId: postEventsBySlugBySlug
+      x-operation-id-source: derived
     delete:
       parameters:
       - in: path
@@ -674,9 +696,13 @@ paths:
           description: The event with the specified ID could not be deleted.
       tags:
       - Events
-  /organizers:
+      summary: Delete events by slug by slug
+      x-summary-source: derived
+      operationId: deleteEventsBySlugBySlug
+      x-operation-id-source: derived
     servers:
-    - url: https://unclenearest.com/wp-json/tec/v1
+    - url: https://unclenearest.com/wp-json/tribe/events/v1/
+  /organizers:
     get:
       summary: Get organizers
       security: []
@@ -837,9 +863,9 @@ paths:
           description: You do not have permission to create organizers
         '500':
           description: Failed to create the organizer
-  /organizers/{id}:
     servers:
     - url: https://unclenearest.com/wp-json/tec/v1
+  /organizers/{id}:
     get:
       summary: Retrieve an Organizer
       security: []
@@ -965,9 +991,9 @@ paths:
           description: Failed to delete the organizer
         '501':
           description: The organizer does not support trashing. Set force=true to delete
-  /venues:
     servers:
     - url: https://unclenearest.com/wp-json/tec/v1
+  /venues:
     get:
       summary: Get venues
       security: []
@@ -1171,9 +1197,9 @@ paths:
           description: You do not have permission to create venues
         '500':
           description: Failed to create the venue
-  /venues/{id}:
     servers:
     - url: https://unclenearest.com/wp-json/tec/v1
+  /venues/{id}:
     get:
       summary: Retrieve a Venue
       security: []
@@ -1307,27 +1333,143 @@ paths:
           description: Failed to delete the venue
         '501':
           description: The venue does not support trashing. Set force=true to delete
+    servers:
+    - url: https://unclenearest.com/wp-json/tec/v1
 components:
   schemas:
-    DateDetails_2:
+    Image:
       type: object
       properties:
-        start:
-          $ref: '#/components/schemas/Date'
-        start_utc:
-          $ref: '#/components/schemas/Date'
-        start_site:
-          $ref: '#/components/schemas/Date'
-        start_display:
-          $ref: '#/components/schemas/Date'
-        end:
-          $ref: '#/components/schemas/Date'
-        end_utc:
-          $ref: '#/components/schemas/Date'
-        end_site:
-          $ref: '#/components/schemas/Date'
-        end_display:
-          $ref: '#/components/schemas/Date'
+        url:
+          type: string
+          format: uri
+          description: The URL to the full size version of the image
+        id:
+          type: integer
+          description: The image WordPress post ID
+        extension:
+          type: string
+          description: The image file extension
+        width:
+          type: integer
+          description: The image natural width in pixels
+        height:
+          type: integer
+          description: The image natural height in pixels
+        sizes:
+          type: array
+          description: The details about each size available for the image
+          items:
+            $ref: '#/components/schemas/ImageSize'
+    Venue:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: The venue WordPress post ID
+        global_id:
+          type: string
+          description: The venue ID used to globally identify in Event Aggregator
+        global_id_lineage:
+          type: array
+          items:
+            type: string
+          description: An Array containing the lineage of where this organizer comes from, this should not change after the organizer is created.
+        author:
+          type: integer
+          description: The venue author WordPress post ID
+        date:
+          type: string
+          description: The venue creation date in the site time zone
+        date_utc:
+          type: string
+          description: The venue creation date in UTC time
+        modified:
+          type: string
+          description: The venue last modification date in the site time zone
+        modified_utc:
+          type: string
+          description: The venue last modification date in UTC time
+        status:
+          type: string
+          description: The venue status
+        url:
+          type: string
+          description: The URL to the venue page
+        venue:
+          type: string
+          description: The venue name
+        description:
+          type: string
+          description: The venue long description
+        excerpt:
+          type: string
+          description: The venue short description
+        slug:
+          type: string
+          description: The venue slug
+        image:
+          type: string
+          description: The event featured image details if set
+          $ref: '#/components/schemas/Image'
+        show_map:
+          type: boolean
+          description: Whether the map should be shown for the venue or not
+        show_map_link:
+          type: boolean
+          description: Whether the map link should be shown for the venue or not
+        address:
+          type: string
+          description: The venue address
+        city:
+          type: string
+          description: The venue city
+        country:
+          type: string
+          description: The venue country
+        province:
+          type: string
+          description: The venue province
+        state:
+          type: string
+          description: The venue state
+        zip:
+          type: string
+          description: The venue ZIP code
+        phone:
+          type: string
+          description: The venue phone number
+        website:
+          type: string
+          description: The venue website URL
+        stateprovince:
+          type: string
+          description: The venue state or province
+        geo_lat:
+          type: number
+          format: double
+          description: The venue geo latitude
+        geo_lng:
+          type: number
+          format: double
+          description: The venue geo longitude
+    CostDetails:
+      type: object
+      properties:
+        currency_symbol:
+          type: string
+          description: The cost currency symbol
+        'currency_position ':
+          type: string
+          description: The position of the currency symbol in the cost string
+          enum:
+          - prefix
+          - postfix
+        values:
+          type: array
+          items:
+            type: integer
+          description: A sorted array of all the numeric values for the cost
     Term:
       type: object
       properties:
@@ -1360,6 +1502,314 @@ components:
           items:
             type: string
           description: A list of links to the term own, archive and parent REST URL
+    DateDetails:
+      type: object
+      properties:
+        year:
+          type: integer
+          description: The date year
+        month:
+          type: integer
+          description: The date month
+        day:
+          type: integer
+          description: The date day
+        hour:
+          type: integer
+          description: The date hour
+        minutes:
+          type: integer
+          description: The date minutes
+        seconds:
+          type: integer
+          description: The date seconds
+    ImageSize:
+      type: object
+      properties:
+        width:
+          type: integer
+          description: The image width in pixels in the specified size
+        height:
+          type: integer
+          description: The image height in pixels in the specified size
+        mime-type:
+          type: string
+          description: The image mime-type
+        url:
+          type: string
+          format: uri
+          description: The link to the image in the specified size on the site
+    Organizer:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: The organizer WordPress post ID
+        global_id:
+          type: string
+          description: The organizer ID used to globally identify in Event Aggregator
+        global_id_lineage:
+          type: array
+          items:
+            type: string
+          description: An Array containing the lineage of where this organizer comes from, this should not change after the organizer is created.
+        author:
+          type: integer
+          description: The organizer author WordPress post ID
+        date:
+          type: string
+          description: The organizer creation date in the site time zone
+        date_utc:
+          type: string
+          description: The organizer creation date in UTC time
+        modified:
+          type: string
+          description: The organizer last modification date in the site time zone
+        modified_utc:
+          type: string
+          description: The organizer last modification date in UTC time
+        status:
+          type: string
+          description: The organizer status
+        url:
+          type: string
+          description: The URL to the organizer page
+        organizer:
+          type: string
+          description: The organizer name
+        description:
+          type: string
+          description: The organizer long description
+        excerpt:
+          type: string
+          description: The organizer short description
+        slug:
+          type: string
+          description: The organizer slug
+        image:
+          type: string
+          description: The event featured image details if set
+          $ref: '#/components/schemas/Image'
+        phone:
+          type: string
+          description: The organizer phone number
+        website:
+          type: string
+          description: The organizer website
+        email:
+          type: string
+          description: The organizer email address
+    Event:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: The event WordPress post ID
+        global_id:
+          type: string
+          description: The event ID used to globally identify in Event Aggregator
+        global_id_lineage:
+          type: array
+          items:
+            type: string
+          description: An Array containing the lineage of where this event comes from, this should not change after the event is created.
+        author:
+          type: integer
+          description: The event author WordPress post ID
+        date:
+          type: string
+          description: The event creation date in the site time zone
+        date_utc:
+          type: string
+          description: The event creation date in UTC time
+        modified:
+          type: string
+          description: The event last modification date in the site time zone
+        modified_utc:
+          type: string
+          description: The event last modification date in UTC time
+        status:
+          type: string
+          description: The event status
+        url:
+          type: string
+          description: The URL to the event page
+        rest_url:
+          type: string
+          description: The TEC REST API link to fetch this event
+        title:
+          type: string
+          description: The event name
+        description:
+          type: string
+          description: The event long description
+        excerpt:
+          type: string
+          description: The event short description
+        slug:
+          type: string
+          description: The event slug
+        image:
+          type: object
+          description: The event featured image details if set
+          $ref: '#/components/schemas/Image'
+        all_day:
+          type: boolean
+          description: Whether or not this event is an all day Event
+        start_date:
+          type: string
+          description: The event start date in the event or site time zone
+        start_date_details:
+          type: array
+          description: An array of each component of the event start date
+          items:
+            $ref: '#/components/schemas/DateDetails'
+        end_date:
+          type: string
+          description: The event end date in the event or site time zone
+        end_date_details:
+          type: array
+          description: An array of each component of the event end date
+          items:
+            $ref: '#/components/schemas/DateDetails'
+        utc_start_date:
+          type: string
+          description: The event start date in UTC time
+        utc_start_date_details:
+          type: array
+          description: An array of each component of the event start date in UTC time
+          items:
+            $ref: '#/components/schemas/DateDetails'
+        utc_end_date:
+          type: string
+          description: The event end date in UTC time
+        utc_end_date_details:
+          type: array
+          description: An array of each component of the event end date in UTC time
+          items:
+            $ref: '#/components/schemas/DateDetails'
+        timezone:
+          type: string
+          description: The event time zone string
+        timezone_abbr:
+          type: string
+          description: The abbreviated event time zone string
+        cost:
+          type: string
+          description: The event cost including the currency symbol
+        cost_details:
+          type: array
+          description: The event cost details
+          items:
+            $ref: '#/components/schemas/CostDetails'
+        website:
+          type: string
+          description: The event website URL
+        show_map:
+          type: boolean
+          description: Whether the map should be shown for the event or not
+        show_map_link:
+          type: boolean
+          description: Whether the map link should be shown for the event or not
+        hide_from_listings:
+          type: boolean
+          description: Whether an event should be hidden from the calendar view or not
+        sticky:
+          type: boolean
+          description: Whether an event is sticky in the calendar view or not
+        featured:
+          type: boolean
+          description: Whether the event is featured in the calendar or not
+        categories:
+          type: array
+          description: The event categories
+          items:
+            $ref: '#/components/schemas/Term'
+        tags:
+          type: array
+          description: The event tags
+          items:
+            $ref: '#/components/schemas/Term'
+        venue:
+          type: object
+          description: The event venue
+          $ref: '#/components/schemas/Venue'
+        organizer:
+          type: array
+          description: The event organizers
+          items:
+            $ref: '#/components/schemas/Organizer'
+    Date:
+      type: object
+      properties:
+        date:
+          description: The date
+          type: string
+          format: date-time
+          pattern: ^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{6}$
+          example: '2025-07-10 08:00:00.000000'
+        timezone_type:
+          description: The timezone type
+          type: integer
+          example: 1
+        timezone:
+          description: The timezone of the date
+          type: string
+          example: Europe/Athens
+    Venue_Request_Body:
+      allOf:
+      - $ref: '#/components/schemas/TEC_Post_Entity_Request_Body'
+      - type: object
+        properties:
+          address:
+            description: The venue address
+            type: string
+            example: Example
+          country:
+            description: The venue country
+            type: string
+            example: Example
+          city:
+            description: The venue city
+            type: string
+            example: Example
+          state_province:
+            description: The venue state/province
+            type: string
+            example: Example
+          state:
+            description: The venue state
+            type: string
+            example: Example
+          province:
+            description: The venue province
+            type: string
+            example: Example
+          zip:
+            description: The venue zip code
+            type: string
+            example: Example
+          phone:
+            description: The venue phone number
+            type: string
+            example: Example
+          website:
+            description: The venue website
+            type: string
+            format: uri
+            example: https://example.com
+      - type: object
+        title: 'Pro: Venue Request Body'
+        description: The request body for the venue endpoint, with Pro-specific properties
+        properties:
+          lat:
+            description: The latitude of the venue
+            type: number
+            example: 37.774929
+          lng:
+            description: The longitude of the venue
+            type: number
+            example: -122.419416
     Event_2:
       allOf:
       - $ref: '#/components/schemas/TEC_Post_Entity'
@@ -1531,143 +1981,12 @@ components:
             - 'null'
             format: uri
             example: https://zoom.us/j/123456789
-    Image:
-      type: object
-      properties:
-        url:
-          type: string
-          format: uri
-          description: The URL to the full size version of the image
-        id:
-          type: integer
-          description: The image WordPress post ID
-        extension:
-          type: string
-          description: The image file extension
-        width:
-          type: integer
-          description: The image natural width in pixels
-        height:
-          type: integer
-          description: The image natural height in pixels
-        sizes:
-          type: array
-          description: The details about each size available for the image
-          items:
-            $ref: '#/components/schemas/ImageSize'
-    Venue:
-      type: object
-      properties:
-        id:
-          type: integer
-          description: The venue WordPress post ID
-        global_id:
-          type: string
-          description: The venue ID used to globally identify in Event Aggregator
-        global_id_lineage:
-          type: array
-          items:
-            type: string
-          description: An Array containing the lineage of where this organizer comes from, this should not change after the organizer is created.
-        author:
-          type: integer
-          description: The venue author WordPress post ID
-        date:
-          type: string
-          description: The venue creation date in the site time zone
-        date_utc:
-          type: string
-          description: The venue creation date in UTC time
-        modified:
-          type: string
-          description: The venue last modification date in the site time zone
-        modified_utc:
-          type: string
-          description: The venue last modification date in UTC time
-        status:
-          type: string
-          description: The venue status
-        url:
-          type: string
-          description: The URL to the venue page
-        venue:
-          type: string
-          description: The venue name
-        description:
-          type: string
-          description: The venue long description
-        excerpt:
-          type: string
-          description: The venue short description
-        slug:
-          type: string
-          description: The venue slug
-        image:
-          type: string
-          description: The event featured image details if set
-          $ref: '#/components/schemas/Image'
-        show_map:
-          type: boolean
-          description: Whether the map should be shown for the venue or not
-        show_map_link:
-          type: boolean
-          description: Whether the map link should be shown for the venue or not
-        address:
-          type: string
-          description: The venue address
-        city:
-          type: string
-          description: The venue city
-        country:
-          type: string
-          description: The venue country
-        province:
-          type: string
-          description: The venue province
-        state:
-          type: string
-          description: The venue state
-        zip:
-          type: string
-          description: The venue ZIP code
-        phone:
-          type: string
-          description: The venue phone number
-        website:
-          type: string
-          description: The venue website URL
-        stateprovince:
-          type: string
-          description: The venue state or province
-        geo_lat:
-          type: number
-          format: double
-          description: The venue geo latitude
-        geo_lng:
-          type: number
-          format: double
-          description: The venue geo longitude
-    Date:
-      type: object
-      properties:
-        date:
-          description: The date
-          type: string
-          format: date-time
-          pattern: ^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{6}$
-          example: '2025-07-10 08:00:00.000000'
-        timezone_type:
-          description: The timezone type
-          type: integer
-          example: 1
-        timezone:
-          description: The timezone of the date
-          type: string
-          example: Europe/Athens
-    Venue_Request_Body:
+    Venue_2:
       allOf:
-      - $ref: '#/components/schemas/TEC_Post_Entity_Request_Body'
-      - type: object
+      - $ref: '#/components/schemas/TEC_Post_Entity'
+      - title: Venue
+        description: A venue
+        type: object
         properties:
           address:
             description: The venue address
@@ -1706,18 +2025,33 @@ components:
             type: string
             format: uri
             example: https://example.com
+          directions_link:
+            description: The venue directions link
+            type: string
+            format: uri
+            example: https://example.com
+    Organizer_Request_Body:
+      allOf:
+      - $ref: '#/components/schemas/TEC_Post_Entity_Request_Body'
       - type: object
-        title: 'Pro: Venue Request Body'
-        description: The request body for the venue endpoint, with Pro-specific properties
+        title: Organizer Request Body
+        description: The request body for the organizer endpoint
         properties:
-          lat:
-            description: The latitude of the venue
-            type: number
-            example: 37.774929
-          lng:
-            description: The longitude of the venue
-            type: number
-            example: -122.419416
+          phone:
+            description: The organizer's phone number
+            type: string
+            format: tel
+            example: 123-456-7890
+          website:
+            description: The organizer's website
+            type: string
+            format: uri
+            example: https://example.com
+          email:
+            description: The organizer's email address
+            type: string
+            format: email
+            example: example@theeventscalendar.com
     Event_Request_Body:
       allOf:
       - $ref: '#/components/schemas/TEC_Post_Entity_Request_Body'
@@ -1814,147 +2148,25 @@ components:
             description: The longitude of the event
             type: number
             example: -122.419416
-    ImageSize:
+    DateDetails_2:
       type: object
       properties:
-        width:
-          type: integer
-          description: The image width in pixels in the specified size
-        height:
-          type: integer
-          description: The image height in pixels in the specified size
-        mime-type:
-          type: string
-          description: The image mime-type
-        url:
-          type: string
-          format: uri
-          description: The link to the image in the specified size on the site
-    DateDetails:
-      type: object
-      properties:
-        year:
-          type: integer
-          description: The date year
-        month:
-          type: integer
-          description: The date month
-        day:
-          type: integer
-          description: The date day
-        hour:
-          type: integer
-          description: The date hour
-        minutes:
-          type: integer
-          description: The date minutes
-        seconds:
-          type: integer
-          description: The date seconds
-    Organizer_Request_Body:
-      allOf:
-      - $ref: '#/components/schemas/TEC_Post_Entity_Request_Body'
-      - type: object
-        title: Organizer Request Body
-        description: The request body for the organizer endpoint
-        properties:
-          phone:
-            description: The organizer's phone number
-            type: string
-            format: tel
-            example: 123-456-7890
-          website:
-            description: The organizer's website
-            type: string
-            format: uri
-            example: https://example.com
-          email:
-            description: The organizer's email address
-            type: string
-            format: email
-            example: example@theeventscalendar.com
-    Organizer_2:
-      allOf:
-      - $ref: '#/components/schemas/TEC_Post_Entity'
-      - type: object
-        title: Organizer
-        description: An organizer
-        properties:
-          phone:
-            description: The organizer's phone number
-            type: string
-            format: tel
-            example: 123-456-7890
-          website:
-            description: The organizer's website
-            type: string
-            format: uri
-            example: https://example.com
-          email:
-            description: The organizer's email address
-            type: string
-            format: email
-            example: example@theeventscalendar.com
-    Organizer:
-      type: object
-      properties:
-        id:
-          type: integer
-          description: The organizer WordPress post ID
-        global_id:
-          type: string
-          description: The organizer ID used to globally identify in Event Aggregator
-        global_id_lineage:
-          type: array
-          items:
-            type: string
-          description: An Array containing the lineage of where this organizer comes from, this should not change after the organizer is created.
-        author:
-          type: integer
-          description: The organizer author WordPress post ID
-        date:
-          type: string
-          description: The organizer creation date in the site time zone
-        date_utc:
-          type: string
-          description: The organizer creation date in UTC time
-        modified:
-          type: string
-          description: The organizer last modification date in the site time zone
-        modified_utc:
-          type: string
-          description: The organizer last modification date in UTC time
-        status:
-          type: string
-          description: The organizer status
-        url:
-          type: string
-          description: The URL to the organizer page
-        organizer:
-          type: string
-          description: The organizer name
-        description:
-          type: string
-          description: The organizer long description
-        excerpt:
-          type: string
-          description: The organizer short description
-        slug:
-          type: string
-          description: The organizer slug
-        image:
-          type: string
-          description: The event featured image details if set
-          $ref: '#/components/schemas/Image'
-        phone:
-          type: string
-          description: The organizer phone number
-        website:
-          type: string
-          description: The organizer website
-        email:
-          type: string
-          description: The organizer email address
+        start:
+          $ref: '#/components/schemas/Date'
+        start_utc:
+          $ref: '#/components/schemas/Date'
+        start_site:
+          $ref: '#/components/schemas/Date'
+        start_display:
+          $ref: '#/components/schemas/Date'
+        end:
+          $ref: '#/components/schemas/Date'
+        end_utc:
+          $ref: '#/components/schemas/Date'
+        end_site:
+          $ref: '#/components/schemas/Date'
+        end_display:
+          $ref: '#/components/schemas/Date'
     TEC_Post_Entity_Request_Body:
       title: TEC Post Entity Request Body
       description: A TEC post object as expected by the REST API
@@ -2062,23 +2274,28 @@ components:
           - 2
           - 8
           - 15
-    CostDetails:
-      type: object
-      properties:
-        currency_symbol:
-          type: string
-          description: The cost currency symbol
-        'currency_position ':
-          type: string
-          description: The position of the currency symbol in the cost string
-          enum:
-          - prefix
-          - postfix
-        values:
-          type: array
-          items:
-            type: integer
-          description: A sorted array of all the numeric values for the cost
+    Organizer_2:
+      allOf:
+      - $ref: '#/components/schemas/TEC_Post_Entity'
+      - type: object
+        title: Organizer
+        description: An organizer
+        properties:
+          phone:
+            description: The organizer's phone number
+            type: string
+            format: tel
+            example: 123-456-7890
+          website:
+            description: The organizer's website
+            type: string
+            format: uri
+            example: https://example.com
+          email:
+            description: The organizer's email address
+            type: string
+            format: email
+            example: example@theeventscalendar.com
     TEC_Post_Entity:
       type: object
       title: TEC Post Entity
@@ -2253,195 +2470,6 @@ components:
           - 2
           - 8
           - 15
-    Venue_2:
-      allOf:
-      - $ref: '#/components/schemas/TEC_Post_Entity'
-      - title: Venue
-        description: A venue
-        type: object
-        properties:
-          address:
-            description: The venue address
-            type: string
-            example: Example
-          country:
-            description: The venue country
-            type: string
-            example: Example
-          city:
-            description: The venue city
-            type: string
-            example: Example
-          state_province:
-            description: The venue state/province
-            type: string
-            example: Example
-          state:
-            description: The venue state
-            type: string
-            example: Example
-          province:
-            description: The venue province
-            type: string
-            example: Example
-          zip:
-            description: The venue zip code
-            type: string
-            example: Example
-          phone:
-            description: The venue phone number
-            type: string
-            example: Example
-          website:
-            description: The venue website
-            type: string
-            format: uri
-            example: https://example.com
-          directions_link:
-            description: The venue directions link
-            type: string
-            format: uri
-            example: https://example.com
-    Event:
-      type: object
-      properties:
-        id:
-          type: integer
-          description: The event WordPress post ID
-        global_id:
-          type: string
-          description: The event ID used to globally identify in Event Aggregator
-        global_id_lineage:
-          type: array
-          items:
-            type: string
-          description: An Array containing the lineage of where this event comes from, this should not change after the event is created.
-        author:
-          type: integer
-          description: The event author WordPress post ID
-        date:
-          type: string
-          description: The event creation date in the site time zone
-        date_utc:
-          type: string
-          description: The event creation date in UTC time
-        modified:
-          type: string
-          description: The event last modification date in the site time zone
-        modified_utc:
-          type: string
-          description: The event last modification date in UTC time
-        status:
-          type: string
-          description: The event status
-        url:
-          type: string
-          description: The URL to the event page
-        rest_url:
-          type: string
-          description: The TEC REST API link to fetch this event
-        title:
-          type: string
-          description: The event name
-        description:
-          type: string
-          description: The event long description
-        excerpt:
-          type: string
-          description: The event short description
-        slug:
-          type: string
-          description: The event slug
-        image:
-          type: object
-          description: The event featured image details if set
-          $ref: '#/components/schemas/Image'
-        all_day:
-          type: boolean
-          description: Whether or not this event is an all day Event
-        start_date:
-          type: string
-          description: The event start date in the event or site time zone
-        start_date_details:
-          type: array
-          description: An array of each component of the event start date
-          items:
-            $ref: '#/components/schemas/DateDetails'
-        end_date:
-          type: string
-          description: The event end date in the event or site time zone
-        end_date_details:
-          type: array
-          description: An array of each component of the event end date
-          items:
-            $ref: '#/components/schemas/DateDetails'
-        utc_start_date:
-          type: string
-          description: The event start date in UTC time
-        utc_start_date_details:
-          type: array
-          description: An array of each component of the event start date in UTC time
-          items:
-            $ref: '#/components/schemas/DateDetails'
-        utc_end_date:
-          type: string
-          description: The event end date in UTC time
-        utc_end_date_details:
-          type: array
-          description: An array of each component of the event end date in UTC time
-          items:
-            $ref: '#/components/schemas/DateDetails'
-        timezone:
-          type: string
-          description: The event time zone string
-        timezone_abbr:
-          type: string
-          description: The abbreviated event time zone string
-        cost:
-          type: string
-          description: The event cost including the currency symbol
-        cost_details:
-          type: array
-          description: The event cost details
-          items:
-            $ref: '#/components/schemas/CostDetails'
-        website:
-          type: string
-          description: The event website URL
-        show_map:
-          type: boolean
-          description: Whether the map should be shown for the event or not
-        show_map_link:
-          type: boolean
-          description: Whether the map link should be shown for the event or not
-        hide_from_listings:
-          type: boolean
-          description: Whether an event should be hidden from the calendar view or not
-        sticky:
-          type: boolean
-          description: Whether an event is sticky in the calendar view or not
-        featured:
-          type: boolean
-          description: Whether the event is featured in the calendar or not
-        categories:
-          type: array
-          description: The event categories
-          items:
-            $ref: '#/components/schemas/Term'
-        tags:
-          type: array
-          description: The event tags
-          items:
-            $ref: '#/components/schemas/Term'
-        venue:
-          type: object
-          description: The event venue
-          $ref: '#/components/schemas/Venue'
-        organizer:
-          type: array
-          description: The event organizers
-          items:
-            $ref: '#/components/schemas/Organizer'
   securitySchemes:
     BasicAuth:
       type: http

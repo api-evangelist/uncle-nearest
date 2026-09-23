@@ -97,6 +97,10 @@ paths:
           description: No event tags match the query or the requested page was not found.
       tags:
       - Tags
+      summary: Get tags
+      x-summary-source: derived
+      operationId: getTags
+      x-operation-id-source: derived
   /tags/{id}:
     get:
       parameters:
@@ -119,6 +123,10 @@ paths:
           description: An event tag with the specified term ID does not exist.
       tags:
       - Tags
+      summary: Get tags by id
+      x-summary-source: derived
+      operationId: getTagsById
+      x-operation-id-source: derived
     post:
       parameters:
       - in: path
@@ -161,6 +169,10 @@ paths:
           description: The user is not authorized to create event tags
       tags:
       - Tags
+      summary: Create tags by id
+      x-summary-source: derived
+      operationId: postTagsById
+      x-operation-id-source: derived
     delete:
       parameters:
       - in: path
@@ -186,6 +198,10 @@ paths:
           description: The event tag with the specified term ID could not be deleted.
       tags:
       - Tags
+      summary: Delete tags by id
+      x-summary-source: derived
+      operationId: deleteTagsById
+      x-operation-id-source: derived
 components:
   schemas:
     Term:
